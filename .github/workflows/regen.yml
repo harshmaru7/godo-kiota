@@ -1,0 +1,97 @@
+name: regenerate
+
+# Kiota-based Go SDK regeneration, modeled on digitalocean/dots'
+# typescript-client-gen.yml but self-contained for Go.
+#
+# Triggered by harshmaru7/openapi-sdk's dispatch workflow (repository_dispatch
+# type "spec-updated") when a spec PR merges to main, or manually.
+
+on:
+  repository_dispatch:
+    types: [spec-updated]
+  workflow_dispatch:
+    inputs:
+      spec_sha:
+        description: "openapi-sdk commit SHA to generate from (default: main)"
+        required: false
+        default: "main"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SDK repo
+        uses: actions/checkout@v4
+
+      - name: Resolve spec SHA
+        id: spec
+        run: echo "sha=${{ github.event.client_payload.sha || inputs.spec_sha || 'main' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout openapi-sdk @ ${{ steps.spec.outputs.sha }}
+        uses: actions/checkout@v4
+        with:
+          repository: harshmaru7/openapi-sdk
+          ref: ${{ steps.spec.outputs.sha }}
+          path: .spec
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Kiota
+        uses: microsoft/setup-kiota@v0.5.0
+        with:
+          version: 1.30.0
+
+      - name: Kiota version
+        run: kiota --version
+
+      - name: Generate SDK
+        run: make generate SPEC_REPO_DIR=.spec
+
+      - name: Stamp generation metadata
+        run: |
+          cat > .sdk-meta.json <<EOF
+          {
+            "language": "go",
+            "generator": "kiota",
+            "spec_repo": "harshmaru7/openapi-sdk",
+            "spec_sha": "${{ steps.spec.outputs.sha }}",
+            "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "generator_workflow_run": "${{ github.run_id }}"
+          }
+          EOF
+
+      - name: Drop spec checkout
+        run: rm -rf .spec
+
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: auto/spec-${{ steps.spec.outputs.sha }}
+          commit-message: "regen: go sdk (kiota) @ openapi-sdk ${{ steps.spec.outputs.sha }}"
+          title: "regen: go sdk (kiota) @ openapi-sdk ${{ steps.spec.outputs.sha }}"
+          body: |
+            Auto-regenerated Go SDK via **Microsoft Kiota** (same flow as `digitalocean/dots`).
+
+            - **language**: `go`
+            - **generator**: `kiota` + post-gen (`tools/dedupe`, `tools/inferencegen`)
+            - **spec**: [`harshmaru7/openapi-sdk@${{ steps.spec.outputs.sha }}`](https://github.com/harshmaru7/openapi-sdk/commit/${{ steps.spec.outputs.sha }})
+            - **generator run**: [#${{ github.run_id }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+            Do not hand-edit generated files — edit the spec in `openapi-sdk` or
+            the generator config here and rerun `make generate`.
+          delete-branch: true
+          committer: "do-sdk-bot <do-sdk-bot@users.noreply.github.com>"
+          author: "do-sdk-bot <do-sdk-bot@users.noreply.github.com>"

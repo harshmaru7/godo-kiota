@@ -1,0 +1,15 @@
+# Bundled spec (intermediate generation artifact)
+/openapi.yaml
+
+# Spec checkout used during CI generation
+/.spec/
+
+# Go
+*.test
+*.out
+/bin/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
