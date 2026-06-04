@@ -2,7 +2,7 @@
   "language": "go",
   "generator": "kiota",
   "spec_repo": "harshmaru7/openapi-sdk",
-  "spec_sha": "bootstrap",
-  "generated_at": "2026-06-04T16:23:06Z",
-  "generator_workflow_run": "local"
+  "spec_sha": "778ef1316a8c609c717a170e9ff70c9390a64d8d",
+  "generated_at": "2026-06-04T16:48:11Z",
+  "generator_workflow_run": "26966100000"
 }
