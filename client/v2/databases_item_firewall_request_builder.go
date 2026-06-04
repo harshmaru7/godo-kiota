@@ -103,7 +103,7 @@ func (m *DatabasesItemFirewallRequestBuilder) GetAsFirewallGetResponse(ctx conte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemFirewallRequestBuilder) Put(ctx context.Context, body DatabasesItemFirewallPutRequestBodyable, requestConfiguration *DatabasesItemFirewallRequestBuilderPutRequestConfiguration)(error) {
+func (m *DatabasesItemFirewallRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_update_firewall_rules_requestable, requestConfiguration *DatabasesItemFirewallRequestBuilderPutRequestConfiguration)(error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -134,7 +134,7 @@ func (m *DatabasesItemFirewallRequestBuilder) ToGetRequestInformation(ctx contex
 }
 // ToPutRequestInformation to update a database cluster's firewall rules (known as "trusted sources" in the control panel), send a PUT request to `/v2/databases/$DATABASE_ID/firewall` specifying which resources should be able to open connections to the database. You may limit connections to specific Droplets, Kubernetes clusters, or IP addresses. When a tag is provided, any Droplet or Kubernetes node with that tag applied to it will have access. The firewall is limited to 100 rules (or trusted sources). When possible, we recommend [placing your databases into a VPC network](https://docs.digitalocean.com/products/networking/vpc/) to limit access to them instead of using a firewall.A successful
 // returns a *RequestInformation when successful
-func (m *DatabasesItemFirewallRequestBuilder) ToPutRequestInformation(ctx context.Context, body DatabasesItemFirewallPutRequestBodyable, requestConfiguration *DatabasesItemFirewallRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemFirewallRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_update_firewall_rules_requestable, requestConfiguration *DatabasesItemFirewallRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

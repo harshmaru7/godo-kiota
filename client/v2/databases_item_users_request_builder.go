@@ -117,7 +117,7 @@ func (m *DatabasesItemUsersRequestBuilder) GetAsUsersGetResponse(ctx context.Con
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemUsersRequestBuilder) Post(ctx context.Context, body DatabasesItemUsersPostRequestBodyable, requestConfiguration *DatabasesItemUsersRequestBuilderPostRequestConfiguration)(DatabasesItemUsersResponseable, error) {
+func (m *DatabasesItemUsersRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_add_user_requestable, requestConfiguration *DatabasesItemUsersRequestBuilderPostRequestConfiguration)(DatabasesItemUsersResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -145,7 +145,7 @@ func (m *DatabasesItemUsersRequestBuilder) Post(ctx context.Context, body Databa
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemUsersRequestBuilder) PostAsUsersPostResponse(ctx context.Context, body DatabasesItemUsersPostRequestBodyable, requestConfiguration *DatabasesItemUsersRequestBuilderPostRequestConfiguration)(DatabasesItemUsersPostResponseable, error) {
+func (m *DatabasesItemUsersRequestBuilder) PostAsUsersPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_add_user_requestable, requestConfiguration *DatabasesItemUsersRequestBuilderPostRequestConfiguration)(DatabasesItemUsersPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -179,7 +179,7 @@ func (m *DatabasesItemUsersRequestBuilder) ToGetRequestInformation(ctx context.C
 }
 // ToPostRequestInformation to add a new database user, send a POST request to `/v2/databases/$DATABASE_ID/users`with the desired username.Note: User management is not supported for Caching or Valkey clusters.When adding a user to a MySQL cluster, additional options can be configured in the`mysql_settings` object.When adding a user to a Kafka cluster, additional options can be configured inthe `settings` object. When adding a user to a MongoDB cluster, additional options can be configured inthe `settings.mongo_user_settings` object.The response will be a JSON object with a key called `user`. The value of this will be anobject that contains the standard attributes associated with a database user includingits randomly generated password.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemUsersRequestBuilder) ToPostRequestInformation(ctx context.Context, body DatabasesItemUsersPostRequestBodyable, requestConfiguration *DatabasesItemUsersRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemUsersRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_add_user_requestable, requestConfiguration *DatabasesItemUsersRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

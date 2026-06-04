@@ -39,7 +39,7 @@ func NewKubernetesClustersItemUpgradeRequestBuilder(rawUrl string, requestAdapte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *KubernetesClustersItemUpgradeRequestBuilder) Post(ctx context.Context, body KubernetesClustersItemUpgradePostRequestBodyable, requestConfiguration *KubernetesClustersItemUpgradeRequestBuilderPostRequestConfiguration)(error) {
+func (m *KubernetesClustersItemUpgradeRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kubernetes_upgrade_cluster_requestable, requestConfiguration *KubernetesClustersItemUpgradeRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -59,7 +59,7 @@ func (m *KubernetesClustersItemUpgradeRequestBuilder) Post(ctx context.Context, 
 }
 // ToPostRequestInformation to immediately upgrade a Kubernetes cluster to a newer patch release ofKubernetes, send a POST request to `/v2/kubernetes/clusters/$K8S_CLUSTER_ID/upgrade`.The body of the request must specify a version attribute.Available upgrade versions for a cluster can be fetched from`/v2/kubernetes/clusters/$K8S_CLUSTER_ID/upgrades`.
 // returns a *RequestInformation when successful
-func (m *KubernetesClustersItemUpgradeRequestBuilder) ToPostRequestInformation(ctx context.Context, body KubernetesClustersItemUpgradePostRequestBodyable, requestConfiguration *KubernetesClustersItemUpgradeRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *KubernetesClustersItemUpgradeRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kubernetes_upgrade_cluster_requestable, requestConfiguration *KubernetesClustersItemUpgradeRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

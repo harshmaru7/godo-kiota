@@ -121,7 +121,7 @@ func (m *DatabasesItemSchemaRegistryRequestBuilder) GetAsSchemaRegistryGetRespon
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemSchemaRegistryRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Database_kafka_schema_createable, requestConfiguration *DatabasesItemSchemaRegistryRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kafka_schema_verboseable, error) {
+func (m *DatabasesItemSchemaRegistryRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_kafka_schema_requestable, requestConfiguration *DatabasesItemSchemaRegistryRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kafka_schema_verboseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -155,7 +155,7 @@ func (m *DatabasesItemSchemaRegistryRequestBuilder) ToGetRequestInformation(ctx 
 }
 // ToPostRequestInformation to create a Kafka schema for a database cluster, send a POST request to`/v2/databases/$DATABASE_ID/schema-registry`.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemSchemaRegistryRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Database_kafka_schema_createable, requestConfiguration *DatabasesItemSchemaRegistryRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemSchemaRegistryRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_kafka_schema_requestable, requestConfiguration *DatabasesItemSchemaRegistryRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

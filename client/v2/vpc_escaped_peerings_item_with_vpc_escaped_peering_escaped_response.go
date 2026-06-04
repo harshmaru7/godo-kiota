@@ -7,14 +7,14 @@ import (
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
 )
 
-// Deprecated: This class is obsolete. Use Vpc_peeringsItemWithVpc_peering_GetResponseable instead.
+// Deprecated: This class is obsolete. Use Vpc_peeringsItemWithVpc_peering_DeleteResponseable instead.
 type Vpc_peeringsItemWithVpc_peering_Response struct {
-    Vpc_peeringsItemWithVpc_peering_GetResponse
+    Vpc_peeringsItemWithVpc_peering_DeleteResponse
 }
 // NewVpc_peeringsItemWithVpc_peering_Response instantiates a new Vpc_peeringsItemWithVpc_peering_Response and sets the default values.
 func NewVpc_peeringsItemWithVpc_peering_Response()(*Vpc_peeringsItemWithVpc_peering_Response) {
     m := &Vpc_peeringsItemWithVpc_peering_Response{
-        Vpc_peeringsItemWithVpc_peering_GetResponse: *NewVpc_peeringsItemWithVpc_peering_GetResponse(),
+        Vpc_peeringsItemWithVpc_peering_DeleteResponse: *NewVpc_peeringsItemWithVpc_peering_DeleteResponse(),
     }
     return m
 }
@@ -23,8 +23,8 @@ func NewVpc_peeringsItemWithVpc_peering_Response()(*Vpc_peeringsItemWithVpc_peer
 func CreateVpc_peeringsItemWithVpc_peering_ResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewVpc_peeringsItemWithVpc_peering_Response(), nil
 }
-// Deprecated: This class is obsolete. Use Vpc_peeringsItemWithVpc_peering_GetResponseable instead.
+// Deprecated: This class is obsolete. Use Vpc_peeringsItemWithVpc_peering_DeleteResponseable instead.
 type Vpc_peeringsItemWithVpc_peering_Responseable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    Vpc_peeringsItemWithVpc_peering_GetResponseable
+    Vpc_peeringsItemWithVpc_peering_DeleteResponseable
 }

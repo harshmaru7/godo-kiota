@@ -137,7 +137,7 @@ func (m *VpcsRequestBuilder) GetAsVpcsGetResponse(ctx context.Context, requestCo
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsRequestBuilder) Post(ctx context.Context, body VpcsPostRequestBodyable, requestConfiguration *VpcsRequestBuilderPostRequestConfiguration)(VpcsResponseable, error) {
+func (m *VpcsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_create_requestable, requestConfiguration *VpcsRequestBuilderPostRequestConfiguration)(VpcsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -163,7 +163,7 @@ func (m *VpcsRequestBuilder) Post(ctx context.Context, body VpcsPostRequestBodya
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsRequestBuilder) PostAsVpcsPostResponse(ctx context.Context, body VpcsPostRequestBodyable, requestConfiguration *VpcsRequestBuilderPostRequestConfiguration)(VpcsPostResponseable, error) {
+func (m *VpcsRequestBuilder) PostAsVpcsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_create_requestable, requestConfiguration *VpcsRequestBuilderPostRequestConfiguration)(VpcsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -199,7 +199,7 @@ func (m *VpcsRequestBuilder) ToGetRequestInformation(ctx context.Context, reques
 }
 // ToPostRequestInformation to create a VPC, send a POST request to `/v2/vpcs` specifying the attributesin the table below in the JSON body.**Note:** If you do not currently have a VPC network in a specific datacenterregion, the first one that you create will be set as the default for thatregion. The default VPC for a region cannot be changed or deleted.
 // returns a *RequestInformation when successful
-func (m *VpcsRequestBuilder) ToPostRequestInformation(ctx context.Context, body VpcsPostRequestBodyable, requestConfiguration *VpcsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VpcsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_create_requestable, requestConfiguration *VpcsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

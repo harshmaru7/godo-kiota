@@ -107,7 +107,7 @@ func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) DeleteAsWithKey_
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) Put(ctx context.Context, body FunctionsNamespacesItemKeysItemWithKey_PutRequestBodyable, requestConfiguration *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilderPutRequestConfiguration)(FunctionsNamespacesItemKeysItemWithKey_Responseable, error) {
+func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Functions_access_key_update_requestable, requestConfiguration *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilderPutRequestConfiguration)(FunctionsNamespacesItemKeysItemWithKey_Responseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -139,7 +139,7 @@ func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) Put(ctx context.
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) PutAsWithKey_PutResponse(ctx context.Context, body FunctionsNamespacesItemKeysItemWithKey_PutRequestBodyable, requestConfiguration *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilderPutRequestConfiguration)(FunctionsNamespacesItemKeysItemWithKey_PutResponseable, error) {
+func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) PutAsWithKey_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Functions_access_key_update_requestable, requestConfiguration *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilderPutRequestConfiguration)(FunctionsNamespacesItemKeysItemWithKey_PutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -175,7 +175,7 @@ func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) ToDeleteRequestI
 }
 // ToPutRequestInformation updates the name of an access key for a serverless functions namespace.To update an access key, send a PUT request to `/v2/functions/namespaces/{namespace_id}/keys/{key_id}`.
 // returns a *RequestInformation when successful
-func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body FunctionsNamespacesItemKeysItemWithKey_PutRequestBodyable, requestConfiguration *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Functions_access_key_update_requestable, requestConfiguration *FunctionsNamespacesItemKeysWithKey_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

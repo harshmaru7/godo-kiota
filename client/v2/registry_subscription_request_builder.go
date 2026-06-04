@@ -102,7 +102,7 @@ func (m *RegistrySubscriptionRequestBuilder) GetAsSubscriptionGetResponse(ctx co
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *RegistrySubscriptionRequestBuilder) Post(ctx context.Context, body RegistrySubscriptionPostRequestBodyable, requestConfiguration *RegistrySubscriptionRequestBuilderPostRequestConfiguration)(RegistrySubscriptionResponseable, error) {
+func (m *RegistrySubscriptionRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Registry_update_subscription_requestable, requestConfiguration *RegistrySubscriptionRequestBuilderPostRequestConfiguration)(RegistrySubscriptionResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -131,7 +131,7 @@ func (m *RegistrySubscriptionRequestBuilder) Post(ctx context.Context, body Regi
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *RegistrySubscriptionRequestBuilder) PostAsSubscriptionPostResponse(ctx context.Context, body RegistrySubscriptionPostRequestBodyable, requestConfiguration *RegistrySubscriptionRequestBuilderPostRequestConfiguration)(RegistrySubscriptionPostResponseable, error) {
+func (m *RegistrySubscriptionRequestBuilder) PostAsSubscriptionPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Registry_update_subscription_requestable, requestConfiguration *RegistrySubscriptionRequestBuilderPostRequestConfiguration)(RegistrySubscriptionPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -167,7 +167,7 @@ func (m *RegistrySubscriptionRequestBuilder) ToGetRequestInformation(ctx context
 // ToPostRequestInformation **Note: This endpoint is deprecated. Please use the `/v2/registries` endpoint instead.**After creating your registry, you can switch to a differentsubscription tier to better suit your needs. To do this, send a POST requestto `/v2/registry/subscription`.
 // Deprecated: 
 // returns a *RequestInformation when successful
-func (m *RegistrySubscriptionRequestBuilder) ToPostRequestInformation(ctx context.Context, body RegistrySubscriptionPostRequestBodyable, requestConfiguration *RegistrySubscriptionRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *RegistrySubscriptionRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Registry_update_subscription_requestable, requestConfiguration *RegistrySubscriptionRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

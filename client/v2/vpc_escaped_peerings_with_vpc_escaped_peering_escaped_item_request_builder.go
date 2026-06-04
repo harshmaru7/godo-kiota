@@ -169,7 +169,7 @@ func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) GetAsWithVpc_peering_Ge
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) Patch(ctx context.Context, body Vpc_peeringsItemWithVpc_peering_PatchRequestBodyable, requestConfiguration *Vpc_peeringsWithVpc_peering_ItemRequestBuilderPatchRequestConfiguration)(Vpc_peeringsItemWithVpc_peering_Responseable, error) {
+func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) Patch(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpc_peerings_patch_requestable, requestConfiguration *Vpc_peeringsWithVpc_peering_ItemRequestBuilderPatchRequestConfiguration)(Vpc_peeringsItemWithVpc_peering_Responseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -197,7 +197,7 @@ func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) Patch(ctx context.Conte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) PatchAsWithVpc_peering_PatchResponse(ctx context.Context, body Vpc_peeringsItemWithVpc_peering_PatchRequestBodyable, requestConfiguration *Vpc_peeringsWithVpc_peering_ItemRequestBuilderPatchRequestConfiguration)(Vpc_peeringsItemWithVpc_peering_PatchResponseable, error) {
+func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) PatchAsWithVpc_peering_PatchResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpc_peerings_patch_requestable, requestConfiguration *Vpc_peeringsWithVpc_peering_ItemRequestBuilderPatchRequestConfiguration)(Vpc_peeringsItemWithVpc_peering_PatchResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -242,7 +242,7 @@ func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) ToGetRequestInformation
 }
 // ToPatchRequestInformation to update the name of a VPC peering, send a PATCH request to `/v2/vpc_peerings/$VPC_PEERING_ID` with the new `name` in the request body.
 // returns a *RequestInformation when successful
-func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body Vpc_peeringsItemWithVpc_peering_PatchRequestBodyable, requestConfiguration *Vpc_peeringsWithVpc_peering_ItemRequestBuilderPatchRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Vpc_peeringsWithVpc_peering_ItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpc_peerings_patch_requestable, requestConfiguration *Vpc_peeringsWithVpc_peering_ItemRequestBuilderPatchRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PATCH, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

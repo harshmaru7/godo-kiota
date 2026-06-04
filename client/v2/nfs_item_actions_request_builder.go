@@ -6,7 +6,6 @@ package v2
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
     i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76 "github.com/harshmaru7/godo-kiota/client/models"
 )
 
@@ -14,198 +13,12 @@ import (
 type NfsItemActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// NfsItemActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable
-type NfsItemActionsRequestBuilder__ActionsPostRequestBody struct {
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable
-    nfs_action_attach i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable
-    nfs_action_detach i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable
-    nfs_action_reassign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable
-    nfs_action_resize i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable
-    nfs_action_snapshot i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable
-    nfs_action_switch_performance_tier i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable
-}
-// NfsItemActionsRequestBuilder__NewActionsPostRequestBody instantiates a new NfsItemActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func NfsItemActionsRequestBuilder__NewActionsPostRequestBody()(*NfsItemActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &NfsItemActionsRequestBuilder__ActionsPostRequestBody{
-    }
-    return m
-}
-// NfsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
-// returns a Parsable when successful
-func NfsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := NfsItemActionsRequestBuilder__NewActionsPostRequestBody()
-    if parseNode != nil {
-        if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateNfs_action_attachFromDiscriminatorValue); val != nil {
-            if err != nil {
-                return nil, err
-            }
-            if cast, ok := val.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable); ok {
-                result.SetNfsActionAttach(cast)
-            }
-        } else if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateNfs_action_detachFromDiscriminatorValue); val != nil {
-            if err != nil {
-                return nil, err
-            }
-            if cast, ok := val.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable); ok {
-                result.SetNfsActionDetach(cast)
-            }
-        } else if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateNfs_action_reassignFromDiscriminatorValue); val != nil {
-            if err != nil {
-                return nil, err
-            }
-            if cast, ok := val.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable); ok {
-                result.SetNfsActionReassign(cast)
-            }
-        } else if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateNfs_action_resizeFromDiscriminatorValue); val != nil {
-            if err != nil {
-                return nil, err
-            }
-            if cast, ok := val.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable); ok {
-                result.SetNfsActionResize(cast)
-            }
-        } else if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateNfs_action_snapshotFromDiscriminatorValue); val != nil {
-            if err != nil {
-                return nil, err
-            }
-            if cast, ok := val.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable); ok {
-                result.SetNfsActionSnapshot(cast)
-            }
-        } else if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateNfs_action_switch_performance_tierFromDiscriminatorValue); val != nil {
-            if err != nil {
-                return nil, err
-            }
-            if cast, ok := val.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable); ok {
-                result.SetNfsActionSwitchPerformanceTier(cast)
-            }
-        }
-    }
-    return result, nil
-}
-// GetFieldDeserializers the deserialization information for the current model
-// returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
-    return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-}
-// GetIsComposedType determines if the current object is a wrapper around a composed type
-// returns a bool when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
-    return true
-}
-// GetNfsActionAttach gets the nfs_action_attach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable
-// returns a Nfs_action_attachable when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetNfsActionAttach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable) {
-    return m.nfs_action_attach
-}
-// GetNfsActionDetach gets the nfs_action_detach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable
-// returns a Nfs_action_detachable when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetNfsActionDetach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable) {
-    return m.nfs_action_detach
-}
-// GetNfsActionReassign gets the nfs_action_reassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable
-// returns a Nfs_action_reassignable when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetNfsActionReassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable) {
-    return m.nfs_action_reassign
-}
-// GetNfsActionResize gets the nfs_action_resize property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable
-// returns a Nfs_action_resizeable when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetNfsActionResize()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable) {
-    return m.nfs_action_resize
-}
-// GetNfsActionSnapshot gets the nfs_action_snapshot property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable
-// returns a Nfs_action_snapshotable when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetNfsActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable) {
-    return m.nfs_action_snapshot
-}
-// GetNfsActionSwitchPerformanceTier gets the nfs_action_switch_performance_tier property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable
-// returns a Nfs_action_switch_performance_tierable when successful
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) GetNfsActionSwitchPerformanceTier()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable) {
-    return m.nfs_action_switch_performance_tier
-}
-// Serialize serializes information the current object
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
-    if m.GetNfsActionAttach() != nil {
-        err := writer.WriteObjectValue("", m.GetNfsActionAttach())
-        if err != nil {
-            return err
-        }
-    } else if m.GetNfsActionDetach() != nil {
-        err := writer.WriteObjectValue("", m.GetNfsActionDetach())
-        if err != nil {
-            return err
-        }
-    } else if m.GetNfsActionReassign() != nil {
-        err := writer.WriteObjectValue("", m.GetNfsActionReassign())
-        if err != nil {
-            return err
-        }
-    } else if m.GetNfsActionResize() != nil {
-        err := writer.WriteObjectValue("", m.GetNfsActionResize())
-        if err != nil {
-            return err
-        }
-    } else if m.GetNfsActionSnapshot() != nil {
-        err := writer.WriteObjectValue("", m.GetNfsActionSnapshot())
-        if err != nil {
-            return err
-        }
-    } else if m.GetNfsActionSwitchPerformanceTier() != nil {
-        err := writer.WriteObjectValue("", m.GetNfsActionSwitchPerformanceTier())
-        if err != nil {
-            return err
-        }
-    }
-    return nil
-}
-// SetNfsActionAttach sets the nfs_action_attach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) SetNfsActionAttach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable)() {
-    m.nfs_action_attach = value
-}
-// SetNfsActionDetach sets the nfs_action_detach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) SetNfsActionDetach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable)() {
-    m.nfs_action_detach = value
-}
-// SetNfsActionReassign sets the nfs_action_reassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) SetNfsActionReassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable)() {
-    m.nfs_action_reassign = value
-}
-// SetNfsActionResize sets the nfs_action_resize property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) SetNfsActionResize(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable)() {
-    m.nfs_action_resize = value
-}
-// SetNfsActionSnapshot sets the nfs_action_snapshot property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) SetNfsActionSnapshot(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable)() {
-    m.nfs_action_snapshot = value
-}
-// SetNfsActionSwitchPerformanceTier sets the nfs_action_switch_performance_tier property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable
-func (m *NfsItemActionsRequestBuilder__ActionsPostRequestBody) SetNfsActionSwitchPerformanceTier(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable)() {
-    m.nfs_action_switch_performance_tier = value
-}
 // NfsItemActionsRequestBuilderPostRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
 type NfsItemActionsRequestBuilderPostRequestConfiguration struct {
     // Request headers
     Headers *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestHeaders
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
-}
-type NfsItemActionsRequestBuilder__ActionsPostRequestBodyable interface {
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetNfsActionAttach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable)
-    GetNfsActionDetach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable)
-    GetNfsActionReassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable)
-    GetNfsActionResize()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable)
-    GetNfsActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable)
-    GetNfsActionSwitchPerformanceTier()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable)
-    SetNfsActionAttach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_attachable)()
-    SetNfsActionDetach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_detachable)()
-    SetNfsActionReassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_reassignable)()
-    SetNfsActionResize(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_resizeable)()
-    SetNfsActionSnapshot(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_snapshotable)()
-    SetNfsActionSwitchPerformanceTier(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_action_switch_performance_tierable)()
 }
 // NewNfsItemActionsRequestBuilderInternal instantiates a new NfsItemActionsRequestBuilder and sets the default values.
 func NewNfsItemActionsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*NfsItemActionsRequestBuilder) {
@@ -227,7 +40,7 @@ func NewNfsItemActionsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7dae
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *NfsItemActionsRequestBuilder) Post(ctx context.Context, body NfsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *NfsItemActionsRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_actions_responseable, error) {
+func (m *NfsItemActionsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_create_action_requestable, requestConfiguration *NfsItemActionsRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_actions_responseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -250,7 +63,7 @@ func (m *NfsItemActionsRequestBuilder) Post(ctx context.Context, body NfsItemAct
 }
 // ToPostRequestInformation to execute an action (such as resize) on a specified NFS share, send a POST request to `/v2/nfs/{nfs_id}/actions`. In the JSON body to the request, set the `type` attribute to on of the supported action types:| Action                           | Details || -------------------------------- | ----------- || <nobr>`resize`</nobr>            | Resizes an NFS share. Set the size_gib attribute to a desired value in GiB || <nobr>`snapshot`</nobr>          | Takes a snapshot of an NFS share || <nobr>`attach`</nobr>            | Attaches an NFS share to a VPC. Set the vpc_id attribute to the desired VPC ID || <nobr>`detach`</nobr>            | Detaches an NFS share from a VPC. Set the vpc_id attribute to the desired VPC ID || <nobr>`reassign`</nobr>          | Reassigns an NFS share from one VPC to another. Set the old_vpc_id and new_vpc_id attributes to the desired VPC IDs || <nobr>`switch_performance_tier`</nobr> | Switches the performance tier of an NFS share. Set the performance_tier attribute to the desired tier (e.g., standard, high) |
 // returns a *RequestInformation when successful
-func (m *NfsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body NfsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *NfsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *NfsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Nfs_create_action_requestable, requestConfiguration *NfsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

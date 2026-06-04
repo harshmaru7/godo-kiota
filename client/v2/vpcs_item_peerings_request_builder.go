@@ -138,7 +138,7 @@ func (m *VpcsItemPeeringsRequestBuilder) GetAsPeeringsGetResponse(ctx context.Co
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsItemPeeringsRequestBuilder) Post(ctx context.Context, body VpcsItemPeeringsPostRequestBodyable, requestConfiguration *VpcsItemPeeringsRequestBuilderPostRequestConfiguration)(VpcsItemPeeringsResponseable, error) {
+func (m *VpcsItemPeeringsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_create_peerings_requestable, requestConfiguration *VpcsItemPeeringsRequestBuilderPostRequestConfiguration)(VpcsItemPeeringsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -166,7 +166,7 @@ func (m *VpcsItemPeeringsRequestBuilder) Post(ctx context.Context, body VpcsItem
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsItemPeeringsRequestBuilder) PostAsPeeringsPostResponse(ctx context.Context, body VpcsItemPeeringsPostRequestBodyable, requestConfiguration *VpcsItemPeeringsRequestBuilderPostRequestConfiguration)(VpcsItemPeeringsPostResponseable, error) {
+func (m *VpcsItemPeeringsRequestBuilder) PostAsPeeringsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_create_peerings_requestable, requestConfiguration *VpcsItemPeeringsRequestBuilderPostRequestConfiguration)(VpcsItemPeeringsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -203,7 +203,7 @@ func (m *VpcsItemPeeringsRequestBuilder) ToGetRequestInformation(ctx context.Con
 }
 // ToPostRequestInformation to create a new VPC peering for a given VPC, send a POST request to`/v2/vpcs/$VPC_ID/peerings`.
 // returns a *RequestInformation when successful
-func (m *VpcsItemPeeringsRequestBuilder) ToPostRequestInformation(ctx context.Context, body VpcsItemPeeringsPostRequestBodyable, requestConfiguration *VpcsItemPeeringsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VpcsItemPeeringsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_create_peerings_requestable, requestConfiguration *VpcsItemPeeringsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

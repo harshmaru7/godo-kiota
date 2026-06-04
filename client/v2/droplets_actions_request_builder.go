@@ -15,23 +15,23 @@ import (
 type DropletsActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// DropletsActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
-type DropletsActionsRequestBuilder__ActionsPostRequestBody struct {
+// Droplet_actions_post_by_tag_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
+type Droplet_actions_post_by_tag_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
     droplet_action i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
     droplet_action_snapshot i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
 }
-// DropletsActionsRequestBuilder__NewActionsPostRequestBody instantiates a new DropletsActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func DropletsActionsRequestBuilder__NewActionsPostRequestBody()(*DropletsActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &DropletsActionsRequestBuilder__ActionsPostRequestBody{
+// NewDroplet_actions_post_by_tag_request instantiates a new Droplet_actions_post_by_tag_request and sets the default values.
+func NewDroplet_actions_post_by_tag_request()(*Droplet_actions_post_by_tag_request) {
+    m := &Droplet_actions_post_by_tag_request{
     }
     return m
 }
-// DropletsActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateDroplet_actions_post_by_tag_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func DropletsActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := DropletsActionsRequestBuilder__NewActionsPostRequestBody()
+func CreateDroplet_actions_post_by_tag_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewDroplet_actions_post_by_tag_request()
     if parseNode != nil {
         mappingValueNode, err := parseNode.GetChildNode("type")
         if err != nil {
@@ -55,17 +55,17 @@ func DropletsActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminato
 }
 // GetDropletAction gets the droplet_action property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
 // returns a Droplet_actionable when successful
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) GetDropletAction()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable) {
+func (m *Droplet_actions_post_by_tag_request) GetDropletAction()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable) {
     return m.droplet_action
 }
 // GetDropletActionSnapshot gets the droplet_action_snapshot property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
 // returns a Droplet_action_snapshotable when successful
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable) {
+func (m *Droplet_actions_post_by_tag_request) GetDropletActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable) {
     return m.droplet_action_snapshot
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Droplet_actions_post_by_tag_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     if m.GetDropletAction() != nil {
         return m.GetDropletAction().GetFieldDeserializers()
     } else if m.GetDropletActionSnapshot() != nil {
@@ -75,11 +75,11 @@ func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserial
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Droplet_actions_post_by_tag_request) GetIsComposedType()(bool) {
     return true
 }
 // Serialize serializes information the current object
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Droplet_actions_post_by_tag_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetDropletAction() != nil {
         err := writer.WriteObjectValue("", m.GetDropletAction())
         if err != nil {
@@ -94,11 +94,11 @@ func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer
     return nil
 }
 // SetDropletAction sets the droplet_action property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) SetDropletAction(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable)() {
+func (m *Droplet_actions_post_by_tag_request) SetDropletAction(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable)() {
     m.droplet_action = value
 }
 // SetDropletActionSnapshot sets the droplet_action_snapshot property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
-func (m *DropletsActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionSnapshot(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable)() {
+func (m *Droplet_actions_post_by_tag_request) SetDropletActionSnapshot(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable)() {
     m.droplet_action_snapshot = value
 }
 // DropletsActionsRequestBuilderPostQueryParameters some actions can be performed in bulk on tagged Droplets. The actions can beinitiated by sending a POST to `/v2/droplets/actions?tag_name=$TAG_NAME` withthe action arguments.Only a sub-set of action types are supported:- `power_cycle`- `power_on`- `power_off`- `shutdown`- `enable_ipv6`- `enable_backups`- `disable_backups`- `snapshot` (also requires `image:create` permission)
@@ -115,7 +115,7 @@ type DropletsActionsRequestBuilderPostRequestConfiguration struct {
     // Request query parameters
     QueryParameters *DropletsActionsRequestBuilderPostQueryParameters
 }
-type DropletsActionsRequestBuilder__ActionsPostRequestBodyable interface {
+type Droplet_actions_post_by_tag_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetDropletAction()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable)
     GetDropletActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable)
@@ -142,7 +142,7 @@ func NewDropletsActionsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7da
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsActionsRequestBuilder) Post(ctx context.Context, body DropletsActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *DropletsActionsRequestBuilderPostRequestConfiguration)(DropletsActionsResponseable, error) {
+func (m *DropletsActionsRequestBuilder) Post(ctx context.Context, body Droplet_actions_post_by_tag_requestable, requestConfiguration *DropletsActionsRequestBuilderPostRequestConfiguration)(DropletsActionsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -168,7 +168,7 @@ func (m *DropletsActionsRequestBuilder) Post(ctx context.Context, body DropletsA
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body DropletsActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *DropletsActionsRequestBuilderPostRequestConfiguration)(DropletsActionsPostResponseable, error) {
+func (m *DropletsActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actions_post_by_tag_requestable, requestConfiguration *DropletsActionsRequestBuilderPostRequestConfiguration)(DropletsActionsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -190,7 +190,7 @@ func (m *DropletsActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Co
 }
 // ToPostRequestInformation some actions can be performed in bulk on tagged Droplets. The actions can beinitiated by sending a POST to `/v2/droplets/actions?tag_name=$TAG_NAME` withthe action arguments.Only a sub-set of action types are supported:- `power_cycle`- `power_on`- `power_off`- `shutdown`- `enable_ipv6`- `enable_backups`- `disable_backups`- `snapshot` (also requires `image:create` permission)
 // returns a *RequestInformation when successful
-func (m *DropletsActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body DropletsActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *DropletsActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DropletsActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actions_post_by_tag_requestable, requestConfiguration *DropletsActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         if requestConfiguration.QueryParameters != nil {

@@ -16,38 +16,8 @@ import (
 type DomainsItemRecordsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// DomainsItemRecordsRequestBuilderGetQueryParameters to get a listing of all records configured for a domain, send a GET request to `/v2/domains/$DOMAIN_NAME/records`.The list of records returned can be filtered by using the `name` and `type` query parameters. For example, to only include A records for a domain, send a GET request to `/v2/domains/$DOMAIN_NAME/records?type=A`. `name` must be a fully qualified record name. For example, to only include records matching `sub.example.com`, send a GET request to `/v2/domains/$DOMAIN_NAME/records?name=sub.example.com`. Both name and type may be used together.
-type DomainsItemRecordsRequestBuilderGetQueryParameters struct {
-    // A fully qualified record name. For example, to only include records matching sub.example.com, send a GET request to `/v2/domains/$DOMAIN_NAME/records?name=sub.example.com`.
-    Name *string `uriparametername:"name"`
-    // Which 'page' of paginated results to return.
-    Page *int32 `uriparametername:"page"`
-    // Number of items returned per page
-    Per_page *int32 `uriparametername:"per_page"`
-    // The type of the DNS record. For example: A, CNAME, TXT, ...
-    // Deprecated: This property is deprecated, use TypeAsGetTypeQueryParameterType instead
-    Type *string `uriparametername:"type"`
-    // The type of the DNS record. For example: A, CNAME, TXT, ...
-    TypeAsGetTypeQueryParameterType *icb3077ea076705b3e3a207966af0e097bf00da0daad6b4413fb1b7147e3be567.GetTypeQueryParameterType `uriparametername:"type"`
-}
-// DomainsItemRecordsRequestBuilderGetRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
-type DomainsItemRecordsRequestBuilderGetRequestConfiguration struct {
-    // Request headers
-    Headers *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestHeaders
-    // Request options
-    Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
-    // Request query parameters
-    QueryParameters *DomainsItemRecordsRequestBuilderGetQueryParameters
-}
-// DomainsItemRecordsRequestBuilderPostRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
-type DomainsItemRecordsRequestBuilderPostRequestConfiguration struct {
-    // Request headers
-    Headers *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestHeaders
-    // Request options
-    Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
-}
-// RecordsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable
-type RecordsPostRequestBody struct {
+// Domains_create_record_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable
+type Domains_create_record_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable
     domain_record_a i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable
@@ -67,16 +37,16 @@ type RecordsPostRequestBody struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable
     domain_record_txt i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable
 }
-// NewRecordsPostRequestBody instantiates a new RecordsPostRequestBody and sets the default values.
-func NewRecordsPostRequestBody()(*RecordsPostRequestBody) {
-    m := &RecordsPostRequestBody{
+// NewDomains_create_record_request instantiates a new Domains_create_record_request and sets the default values.
+func NewDomains_create_record_request()(*Domains_create_record_request) {
+    m := &Domains_create_record_request{
     }
     return m
 }
-// CreateRecordsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateDomains_create_record_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func CreateRecordsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := NewRecordsPostRequestBody()
+func CreateDomains_create_record_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewDomains_create_record_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateDomain_record_aFromDiscriminatorValue); val != nil {
             if err != nil {
@@ -147,61 +117,61 @@ func CreateRecordsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e8
 }
 // GetDomainRecordA gets the domain_record_a property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable
 // returns a Domain_record_aable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordA()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable) {
+func (m *Domains_create_record_request) GetDomainRecordA()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable) {
     return m.domain_record_a
 }
 // GetDomainRecordAaaa gets the domain_record_aaaa property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable
 // returns a Domain_record_aaaaable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordAaaa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable) {
+func (m *Domains_create_record_request) GetDomainRecordAaaa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable) {
     return m.domain_record_aaaa
 }
 // GetDomainRecordCaa gets the domain_record_caa property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable
 // returns a Domain_record_caaable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordCaa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable) {
+func (m *Domains_create_record_request) GetDomainRecordCaa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable) {
     return m.domain_record_caa
 }
 // GetDomainRecordCname gets the domain_record_cname property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable
 // returns a Domain_record_cnameable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordCname()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable) {
+func (m *Domains_create_record_request) GetDomainRecordCname()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable) {
     return m.domain_record_cname
 }
 // GetDomainRecordMx gets the domain_record_mx property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable
 // returns a Domain_record_mxable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordMx()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable) {
+func (m *Domains_create_record_request) GetDomainRecordMx()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable) {
     return m.domain_record_mx
 }
 // GetDomainRecordNs gets the domain_record_ns property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable
 // returns a Domain_record_nsable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordNs()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable) {
+func (m *Domains_create_record_request) GetDomainRecordNs()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable) {
     return m.domain_record_ns
 }
 // GetDomainRecordSoa gets the domain_record_soa property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable
 // returns a Domain_record_soaable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordSoa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable) {
+func (m *Domains_create_record_request) GetDomainRecordSoa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable) {
     return m.domain_record_soa
 }
 // GetDomainRecordSrv gets the domain_record_srv property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable
 // returns a Domain_record_srvable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordSrv()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable) {
+func (m *Domains_create_record_request) GetDomainRecordSrv()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable) {
     return m.domain_record_srv
 }
 // GetDomainRecordTxt gets the domain_record_txt property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable
 // returns a Domain_record_txtable when successful
-func (m *RecordsPostRequestBody) GetDomainRecordTxt()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable) {
+func (m *Domains_create_record_request) GetDomainRecordTxt()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable) {
     return m.domain_record_txt
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *RecordsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Domains_create_record_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *RecordsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Domains_create_record_request) GetIsComposedType()(bool) {
     return true
 }
 // Serialize serializes information the current object
-func (m *RecordsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Domains_create_record_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetDomainRecordA() != nil {
         err := writer.WriteObjectValue("", m.GetDomainRecordA())
         if err != nil {
@@ -251,42 +221,72 @@ func (m *RecordsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487
     return nil
 }
 // SetDomainRecordA sets the domain_record_a property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable
-func (m *RecordsPostRequestBody) SetDomainRecordA(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable)() {
+func (m *Domains_create_record_request) SetDomainRecordA(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable)() {
     m.domain_record_a = value
 }
 // SetDomainRecordAaaa sets the domain_record_aaaa property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable
-func (m *RecordsPostRequestBody) SetDomainRecordAaaa(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable)() {
+func (m *Domains_create_record_request) SetDomainRecordAaaa(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable)() {
     m.domain_record_aaaa = value
 }
 // SetDomainRecordCaa sets the domain_record_caa property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable
-func (m *RecordsPostRequestBody) SetDomainRecordCaa(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable)() {
+func (m *Domains_create_record_request) SetDomainRecordCaa(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_caaable)() {
     m.domain_record_caa = value
 }
 // SetDomainRecordCname sets the domain_record_cname property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable
-func (m *RecordsPostRequestBody) SetDomainRecordCname(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable)() {
+func (m *Domains_create_record_request) SetDomainRecordCname(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_cnameable)() {
     m.domain_record_cname = value
 }
 // SetDomainRecordMx sets the domain_record_mx property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable
-func (m *RecordsPostRequestBody) SetDomainRecordMx(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable)() {
+func (m *Domains_create_record_request) SetDomainRecordMx(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_mxable)() {
     m.domain_record_mx = value
 }
 // SetDomainRecordNs sets the domain_record_ns property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable
-func (m *RecordsPostRequestBody) SetDomainRecordNs(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable)() {
+func (m *Domains_create_record_request) SetDomainRecordNs(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_nsable)() {
     m.domain_record_ns = value
 }
 // SetDomainRecordSoa sets the domain_record_soa property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable
-func (m *RecordsPostRequestBody) SetDomainRecordSoa(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable)() {
+func (m *Domains_create_record_request) SetDomainRecordSoa(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_soaable)() {
     m.domain_record_soa = value
 }
 // SetDomainRecordSrv sets the domain_record_srv property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable
-func (m *RecordsPostRequestBody) SetDomainRecordSrv(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable)() {
+func (m *Domains_create_record_request) SetDomainRecordSrv(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_srvable)() {
     m.domain_record_srv = value
 }
 // SetDomainRecordTxt sets the domain_record_txt property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable
-func (m *RecordsPostRequestBody) SetDomainRecordTxt(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable)() {
+func (m *Domains_create_record_request) SetDomainRecordTxt(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_txtable)() {
     m.domain_record_txt = value
 }
-type RecordsPostRequestBodyable interface {
+// DomainsItemRecordsRequestBuilderGetQueryParameters to get a listing of all records configured for a domain, send a GET request to `/v2/domains/$DOMAIN_NAME/records`.The list of records returned can be filtered by using the `name` and `type` query parameters. For example, to only include A records for a domain, send a GET request to `/v2/domains/$DOMAIN_NAME/records?type=A`. `name` must be a fully qualified record name. For example, to only include records matching `sub.example.com`, send a GET request to `/v2/domains/$DOMAIN_NAME/records?name=sub.example.com`. Both name and type may be used together.
+type DomainsItemRecordsRequestBuilderGetQueryParameters struct {
+    // A fully qualified record name. For example, to only include records matching sub.example.com, send a GET request to `/v2/domains/$DOMAIN_NAME/records?name=sub.example.com`.
+    Name *string `uriparametername:"name"`
+    // Which 'page' of paginated results to return.
+    Page *int32 `uriparametername:"page"`
+    // Number of items returned per page
+    Per_page *int32 `uriparametername:"per_page"`
+    // The type of the DNS record. For example: A, CNAME, TXT, ...
+    // Deprecated: This property is deprecated, use TypeAsGetTypeQueryParameterType instead
+    Type *string `uriparametername:"type"`
+    // The type of the DNS record. For example: A, CNAME, TXT, ...
+    TypeAsGetTypeQueryParameterType *icb3077ea076705b3e3a207966af0e097bf00da0daad6b4413fb1b7147e3be567.GetTypeQueryParameterType `uriparametername:"type"`
+}
+// DomainsItemRecordsRequestBuilderGetRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
+type DomainsItemRecordsRequestBuilderGetRequestConfiguration struct {
+    // Request headers
+    Headers *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestHeaders
+    // Request options
+    Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
+    // Request query parameters
+    QueryParameters *DomainsItemRecordsRequestBuilderGetQueryParameters
+}
+// DomainsItemRecordsRequestBuilderPostRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
+type DomainsItemRecordsRequestBuilderPostRequestConfiguration struct {
+    // Request headers
+    Headers *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestHeaders
+    // Request options
+    Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
+}
+type Domains_create_record_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetDomainRecordA()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aable)
     GetDomainRecordAaaa()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domain_record_aaaaable)
@@ -408,7 +408,7 @@ func (m *DomainsItemRecordsRequestBuilder) GetAsRecordsGetResponse(ctx context.C
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DomainsItemRecordsRequestBuilder) Post(ctx context.Context, body RecordsPostRequestBodyable, requestConfiguration *DomainsItemRecordsRequestBuilderPostRequestConfiguration)(DomainsItemRecordsResponseable, error) {
+func (m *DomainsItemRecordsRequestBuilder) Post(ctx context.Context, body Domains_create_record_requestable, requestConfiguration *DomainsItemRecordsRequestBuilderPostRequestConfiguration)(DomainsItemRecordsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -436,7 +436,7 @@ func (m *DomainsItemRecordsRequestBuilder) Post(ctx context.Context, body Record
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DomainsItemRecordsRequestBuilder) PostAsRecordsPostResponse(ctx context.Context, body RecordsPostRequestBodyable, requestConfiguration *DomainsItemRecordsRequestBuilderPostRequestConfiguration)(DomainsItemRecordsPostResponseable, error) {
+func (m *DomainsItemRecordsRequestBuilder) PostAsRecordsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domains_create_record_requestable, requestConfiguration *DomainsItemRecordsRequestBuilderPostRequestConfiguration)(DomainsItemRecordsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -473,7 +473,7 @@ func (m *DomainsItemRecordsRequestBuilder) ToGetRequestInformation(ctx context.C
 }
 // ToPostRequestInformation to create a new record to a domain, send a POST request to`/v2/domains/$DOMAIN_NAME/records`.The request must include all of the required fields for the domain record typebeing added.See the [attribute table](#tag/Domain-Records) for details regarding recordtypes and their respective required attributes.
 // returns a *RequestInformation when successful
-func (m *DomainsItemRecordsRequestBuilder) ToPostRequestInformation(ctx context.Context, body RecordsPostRequestBodyable, requestConfiguration *DomainsItemRecordsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DomainsItemRecordsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Domains_create_record_requestable, requestConfiguration *DomainsItemRecordsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

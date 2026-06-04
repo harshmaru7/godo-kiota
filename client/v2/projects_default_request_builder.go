@@ -169,7 +169,7 @@ func (m *ProjectsDefaultRequestBuilder) PatchAsDefaultPatchResponse(ctx context.
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *ProjectsDefaultRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projectable, requestConfiguration *ProjectsDefaultRequestBuilderPutRequestConfiguration)(ProjectsDefaultResponseable, error) {
+func (m *ProjectsDefaultRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_update_default_requestable, requestConfiguration *ProjectsDefaultRequestBuilderPutRequestConfiguration)(ProjectsDefaultResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -197,7 +197,7 @@ func (m *ProjectsDefaultRequestBuilder) Put(ctx context.Context, body i3e0d1c568
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *ProjectsDefaultRequestBuilder) PutAsDefaultPutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projectable, requestConfiguration *ProjectsDefaultRequestBuilderPutRequestConfiguration)(ProjectsDefaultPutResponseable, error) {
+func (m *ProjectsDefaultRequestBuilder) PutAsDefaultPutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_update_default_requestable, requestConfiguration *ProjectsDefaultRequestBuilderPutRequestConfiguration)(ProjectsDefaultPutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -251,7 +251,7 @@ func (m *ProjectsDefaultRequestBuilder) ToPatchRequestInformation(ctx context.Co
 }
 // ToPutRequestInformation to update you default project, send a PUT request to `/v2/projects/default`. All of the following attributes must be sent.
 // returns a *RequestInformation when successful
-func (m *ProjectsDefaultRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projectable, requestConfiguration *ProjectsDefaultRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *ProjectsDefaultRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_update_default_requestable, requestConfiguration *ProjectsDefaultRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

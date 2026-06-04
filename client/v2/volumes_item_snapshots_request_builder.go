@@ -115,7 +115,7 @@ func (m *VolumesItemSnapshotsRequestBuilder) GetAsSnapshotsGetResponse(ctx conte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VolumesItemSnapshotsRequestBuilder) Post(ctx context.Context, body VolumesItemSnapshotsPostRequestBodyable, requestConfiguration *VolumesItemSnapshotsRequestBuilderPostRequestConfiguration)(VolumesItemSnapshotsResponseable, error) {
+func (m *VolumesItemSnapshotsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_snapshots_create_requestable, requestConfiguration *VolumesItemSnapshotsRequestBuilderPostRequestConfiguration)(VolumesItemSnapshotsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -145,7 +145,7 @@ func (m *VolumesItemSnapshotsRequestBuilder) Post(ctx context.Context, body Volu
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VolumesItemSnapshotsRequestBuilder) PostAsSnapshotsPostResponse(ctx context.Context, body VolumesItemSnapshotsPostRequestBodyable, requestConfiguration *VolumesItemSnapshotsRequestBuilderPostRequestConfiguration)(VolumesItemSnapshotsPostResponseable, error) {
+func (m *VolumesItemSnapshotsRequestBuilder) PostAsSnapshotsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_snapshots_create_requestable, requestConfiguration *VolumesItemSnapshotsRequestBuilderPostRequestConfiguration)(VolumesItemSnapshotsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -183,7 +183,7 @@ func (m *VolumesItemSnapshotsRequestBuilder) ToGetRequestInformation(ctx context
 }
 // ToPostRequestInformation to create a snapshot from a volume, sent a POST request to `/v2/volumes/$VOLUME_ID/snapshots`.
 // returns a *RequestInformation when successful
-func (m *VolumesItemSnapshotsRequestBuilder) ToPostRequestInformation(ctx context.Context, body VolumesItemSnapshotsPostRequestBodyable, requestConfiguration *VolumesItemSnapshotsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VolumesItemSnapshotsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_snapshots_create_requestable, requestConfiguration *VolumesItemSnapshotsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

@@ -41,7 +41,7 @@ func NewDatabasesItemUsersItemReset_authRequestBuilder(rawUrl string, requestAda
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemUsersItemReset_authRequestBuilder) Post(ctx context.Context, body DatabasesItemUsersItemReset_authPostRequestBodyable, requestConfiguration *DatabasesItemUsersItemReset_authRequestBuilderPostRequestConfiguration)(DatabasesItemUsersItemReset_authResponseable, error) {
+func (m *DatabasesItemUsersItemReset_authRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_reset_auth_requestable, requestConfiguration *DatabasesItemUsersItemReset_authRequestBuilderPostRequestConfiguration)(DatabasesItemUsersItemReset_authResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -69,7 +69,7 @@ func (m *DatabasesItemUsersItemReset_authRequestBuilder) Post(ctx context.Contex
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemUsersItemReset_authRequestBuilder) PostAsReset_authPostResponse(ctx context.Context, body DatabasesItemUsersItemReset_authPostRequestBodyable, requestConfiguration *DatabasesItemUsersItemReset_authRequestBuilderPostRequestConfiguration)(DatabasesItemUsersItemReset_authPostResponseable, error) {
+func (m *DatabasesItemUsersItemReset_authRequestBuilder) PostAsReset_authPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_reset_auth_requestable, requestConfiguration *DatabasesItemUsersItemReset_authRequestBuilderPostRequestConfiguration)(DatabasesItemUsersItemReset_authPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -92,7 +92,7 @@ func (m *DatabasesItemUsersItemReset_authRequestBuilder) PostAsReset_authPostRes
 }
 // ToPostRequestInformation to reset the password for a database user, send a POST request to`/v2/databases/$DATABASE_ID/users/$USERNAME/reset_auth`.For `mysql` databases, the authentication method can be specifying byincluding a key in the JSON body called `mysql_settings` with the `auth_plugin`value specified.The response will be a JSON object with a `user` key. This will be set to anobject containing the standard database user attributes.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemUsersItemReset_authRequestBuilder) ToPostRequestInformation(ctx context.Context, body DatabasesItemUsersItemReset_authPostRequestBodyable, requestConfiguration *DatabasesItemUsersItemReset_authRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemUsersItemReset_authRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_reset_auth_requestable, requestConfiguration *DatabasesItemUsersItemReset_authRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

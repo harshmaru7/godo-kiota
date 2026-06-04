@@ -7,7 +7,6 @@ import (
     "context"
     i53ac87e8cb3cc9276228f74d38694a208cacb99bb8ceb705eeae99fb88d4d274 "strconv"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
     i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76 "github.com/harshmaru7/godo-kiota/client/models"
     i970151352859e659c2d132ade28e4b8e21350691cde2c845c2236caa3d66e987 "github.com/harshmaru7/godo-kiota/client/v2/droplets"
 )
@@ -15,168 +14,6 @@ import (
 // DropletsRequestBuilder builds and executes requests for operations under \v2\droplets
 type DropletsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
-}
-// DropletsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable
-type DropletsPostRequestBody struct {
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable
-    droplet_multi_create i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable
-    // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable
-    droplet_single_create i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable
-}
-// NewDropletsPostRequestBody instantiates a new DropletsPostRequestBody and sets the default values.
-func NewDropletsPostRequestBody()(*DropletsPostRequestBody) {
-    m := &DropletsPostRequestBody{
-    }
-    return m
-}
-// CreateDropletsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
-// returns a Parsable when successful
-func CreateDropletsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := NewDropletsPostRequestBody()
-    if parseNode != nil {
-        mappingValueNode, err := parseNode.GetChildNode("")
-        if err != nil {
-            return nil, err
-        }
-        if mappingValueNode != nil {
-            mappingValue, err := mappingValueNode.GetStringValue()
-            if err != nil {
-                return nil, err
-            }
-            if mappingValue != nil {
-            }
-        }
-    }
-    return result, nil
-}
-// GetDropletMultiCreate gets the droplet_multi_create property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable
-// returns a Droplet_multi_createable when successful
-func (m *DropletsPostRequestBody) GetDropletMultiCreate()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable) {
-    return m.droplet_multi_create
-}
-// GetDropletSingleCreate gets the droplet_single_create property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable
-// returns a Droplet_single_createable when successful
-func (m *DropletsPostRequestBody) GetDropletSingleCreate()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable) {
-    return m.droplet_single_create
-}
-// GetFieldDeserializers the deserialization information for the current model
-// returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *DropletsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
-    if m.GetDropletMultiCreate() != nil {
-        return m.GetDropletMultiCreate().GetFieldDeserializers()
-    } else if m.GetDropletSingleCreate() != nil {
-        return m.GetDropletSingleCreate().GetFieldDeserializers()
-    }
-    return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-}
-// GetIsComposedType determines if the current object is a wrapper around a composed type
-// returns a bool when successful
-func (m *DropletsPostRequestBody) GetIsComposedType()(bool) {
-    return true
-}
-// Serialize serializes information the current object
-func (m *DropletsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
-    if m.GetDropletMultiCreate() != nil {
-        err := writer.WriteObjectValue("", m.GetDropletMultiCreate())
-        if err != nil {
-            return err
-        }
-    } else if m.GetDropletSingleCreate() != nil {
-        err := writer.WriteObjectValue("", m.GetDropletSingleCreate())
-        if err != nil {
-            return err
-        }
-    }
-    return nil
-}
-// SetDropletMultiCreate sets the droplet_multi_create property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable
-func (m *DropletsPostRequestBody) SetDropletMultiCreate(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable)() {
-    m.droplet_multi_create = value
-}
-// SetDropletSingleCreate sets the droplet_single_create property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable
-func (m *DropletsPostRequestBody) SetDropletSingleCreate(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable)() {
-    m.droplet_single_create = value
-}
-// DropletsPostResponse composed type wrapper for classes DropletsPostResponseMember1able, DropletsPostResponseMember2able
-type DropletsPostResponse struct {
-    // Composed type representation for type DropletsPostResponseMember1able
-    dropletsPostResponseMember1 DropletsPostResponseMember1able
-    // Composed type representation for type DropletsPostResponseMember2able
-    dropletsPostResponseMember2 DropletsPostResponseMember2able
-}
-// NewDropletsPostResponse instantiates a new DropletsPostResponse and sets the default values.
-func NewDropletsPostResponse()(*DropletsPostResponse) {
-    m := &DropletsPostResponse{
-    }
-    return m
-}
-// CreateDropletsPostResponseFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
-// returns a Parsable when successful
-func CreateDropletsPostResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := NewDropletsPostResponse()
-    if parseNode != nil {
-        mappingValueNode, err := parseNode.GetChildNode("")
-        if err != nil {
-            return nil, err
-        }
-        if mappingValueNode != nil {
-            mappingValue, err := mappingValueNode.GetStringValue()
-            if err != nil {
-                return nil, err
-            }
-            if mappingValue != nil {
-            }
-        }
-    }
-    return result, nil
-}
-// GetDropletsPostResponseMember1 gets the DropletsPostResponseMember1 property value. Composed type representation for type DropletsPostResponseMember1able
-// returns a DropletsPostResponseMember1able when successful
-func (m *DropletsPostResponse) GetDropletsPostResponseMember1()(DropletsPostResponseMember1able) {
-    return m.dropletsPostResponseMember1
-}
-// GetDropletsPostResponseMember2 gets the DropletsPostResponseMember2 property value. Composed type representation for type DropletsPostResponseMember2able
-// returns a DropletsPostResponseMember2able when successful
-func (m *DropletsPostResponse) GetDropletsPostResponseMember2()(DropletsPostResponseMember2able) {
-    return m.dropletsPostResponseMember2
-}
-// GetFieldDeserializers the deserialization information for the current model
-// returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *DropletsPostResponse) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
-    if m.GetDropletsPostResponseMember1() != nil {
-        return m.GetDropletsPostResponseMember1().GetFieldDeserializers()
-    } else if m.GetDropletsPostResponseMember2() != nil {
-        return m.GetDropletsPostResponseMember2().GetFieldDeserializers()
-    }
-    return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-}
-// GetIsComposedType determines if the current object is a wrapper around a composed type
-// returns a bool when successful
-func (m *DropletsPostResponse) GetIsComposedType()(bool) {
-    return true
-}
-// Serialize serializes information the current object
-func (m *DropletsPostResponse) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
-    if m.GetDropletsPostResponseMember1() != nil {
-        err := writer.WriteObjectValue("", m.GetDropletsPostResponseMember1())
-        if err != nil {
-            return err
-        }
-    } else if m.GetDropletsPostResponseMember2() != nil {
-        err := writer.WriteObjectValue("", m.GetDropletsPostResponseMember2())
-        if err != nil {
-            return err
-        }
-    }
-    return nil
-}
-// SetDropletsPostResponseMember1 sets the DropletsPostResponseMember1 property value. Composed type representation for type DropletsPostResponseMember1able
-func (m *DropletsPostResponse) SetDropletsPostResponseMember1(value DropletsPostResponseMember1able)() {
-    m.dropletsPostResponseMember1 = value
-}
-// SetDropletsPostResponseMember2 sets the DropletsPostResponseMember2 property value. Composed type representation for type DropletsPostResponseMember2able
-func (m *DropletsPostResponse) SetDropletsPostResponseMember2(value DropletsPostResponseMember2able)() {
-    m.dropletsPostResponseMember2 = value
 }
 // DropletsRequestBuilderDeleteQueryParameters to delete **all** Droplets assigned to a specific tag, include the `tag_name`query parameter set to the name of the tag in your DELETE request. Forexample, `/v2/droplets?tag_name=$TAG_NAME`.This endpoint requires `tag:read` scope.A successful request will receive a 204 status code with no body in response.This indicates that the request was processed successfully.
 type DropletsRequestBuilderDeleteQueryParameters struct {
@@ -224,108 +61,6 @@ type DropletsRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-// DropletsRequestBuilder__DropletsResponse composed type wrapper for classes DropletsPostResponseMember1able, DropletsPostResponseMember2able
-type DropletsRequestBuilder__DropletsResponse struct {
-    // Composed type representation for type DropletsPostResponseMember1able
-    dropletsPostResponseMember1 DropletsPostResponseMember1able
-    // Composed type representation for type DropletsPostResponseMember2able
-    dropletsPostResponseMember2 DropletsPostResponseMember2able
-}
-// DropletsRequestBuilder__NewDropletsResponse instantiates a new DropletsRequestBuilder__DropletsResponse and sets the default values.
-func DropletsRequestBuilder__NewDropletsResponse()(*DropletsRequestBuilder__DropletsResponse) {
-    m := &DropletsRequestBuilder__DropletsResponse{
-    }
-    return m
-}
-// DropletsRequestBuilder__CreateDropletsResponseFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
-// returns a Parsable when successful
-func DropletsRequestBuilder__CreateDropletsResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := DropletsRequestBuilder__NewDropletsResponse()
-    if parseNode != nil {
-        mappingValueNode, err := parseNode.GetChildNode("")
-        if err != nil {
-            return nil, err
-        }
-        if mappingValueNode != nil {
-            mappingValue, err := mappingValueNode.GetStringValue()
-            if err != nil {
-                return nil, err
-            }
-            if mappingValue != nil {
-            }
-        }
-    }
-    return result, nil
-}
-// GetDropletsPostResponseMember1 gets the DropletsPostResponseMember1 property value. Composed type representation for type DropletsPostResponseMember1able
-// returns a DropletsPostResponseMember1able when successful
-func (m *DropletsRequestBuilder__DropletsResponse) GetDropletsPostResponseMember1()(DropletsPostResponseMember1able) {
-    return m.dropletsPostResponseMember1
-}
-// GetDropletsPostResponseMember2 gets the DropletsPostResponseMember2 property value. Composed type representation for type DropletsPostResponseMember2able
-// returns a DropletsPostResponseMember2able when successful
-func (m *DropletsRequestBuilder__DropletsResponse) GetDropletsPostResponseMember2()(DropletsPostResponseMember2able) {
-    return m.dropletsPostResponseMember2
-}
-// GetFieldDeserializers the deserialization information for the current model
-// returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *DropletsRequestBuilder__DropletsResponse) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
-    if m.GetDropletsPostResponseMember1() != nil {
-        return m.GetDropletsPostResponseMember1().GetFieldDeserializers()
-    } else if m.GetDropletsPostResponseMember2() != nil {
-        return m.GetDropletsPostResponseMember2().GetFieldDeserializers()
-    }
-    return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
-}
-// GetIsComposedType determines if the current object is a wrapper around a composed type
-// returns a bool when successful
-func (m *DropletsRequestBuilder__DropletsResponse) GetIsComposedType()(bool) {
-    return true
-}
-// Serialize serializes information the current object
-func (m *DropletsRequestBuilder__DropletsResponse) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
-    if m.GetDropletsPostResponseMember1() != nil {
-        err := writer.WriteObjectValue("", m.GetDropletsPostResponseMember1())
-        if err != nil {
-            return err
-        }
-    } else if m.GetDropletsPostResponseMember2() != nil {
-        err := writer.WriteObjectValue("", m.GetDropletsPostResponseMember2())
-        if err != nil {
-            return err
-        }
-    }
-    return nil
-}
-// SetDropletsPostResponseMember1 sets the DropletsPostResponseMember1 property value. Composed type representation for type DropletsPostResponseMember1able
-func (m *DropletsRequestBuilder__DropletsResponse) SetDropletsPostResponseMember1(value DropletsPostResponseMember1able)() {
-    m.dropletsPostResponseMember1 = value
-}
-// SetDropletsPostResponseMember2 sets the DropletsPostResponseMember2 property value. Composed type representation for type DropletsPostResponseMember2able
-func (m *DropletsRequestBuilder__DropletsResponse) SetDropletsPostResponseMember2(value DropletsPostResponseMember2able)() {
-    m.dropletsPostResponseMember2 = value
-}
-type DropletsPostRequestBodyable interface {
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetDropletMultiCreate()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable)
-    GetDropletSingleCreate()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable)
-    SetDropletMultiCreate(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_multi_createable)()
-    SetDropletSingleCreate(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_single_createable)()
-}
-type DropletsPostResponseable interface {
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetDropletsPostResponseMember1()(DropletsPostResponseMember1able)
-    GetDropletsPostResponseMember2()(DropletsPostResponseMember2able)
-    SetDropletsPostResponseMember1(value DropletsPostResponseMember1able)()
-    SetDropletsPostResponseMember2(value DropletsPostResponseMember2able)()
-}
-type DropletsRequestBuilder__DropletsResponseable interface {
-    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    GetDropletsPostResponseMember1()(DropletsPostResponseMember1able)
-    GetDropletsPostResponseMember2()(DropletsPostResponseMember2able)
-    SetDropletsPostResponseMember1(value DropletsPostResponseMember1able)()
-    SetDropletsPostResponseMember2(value DropletsPostResponseMember2able)()
-}
 // Actions the actions property
 // returns a *DropletsActionsRequestBuilder when successful
 func (m *DropletsRequestBuilder) Actions()(*DropletsActionsRequestBuilder) {
@@ -367,7 +102,7 @@ func (m *DropletsRequestBuilder) ByDroplet_idInteger(droplet_id int32)(*Droplets
 // NewDropletsRequestBuilderInternal instantiates a new DropletsRequestBuilder and sets the default values.
 func NewDropletsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*DropletsRequestBuilder) {
     m := &DropletsRequestBuilder{
-        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/v2/droplets{?name*,page*,per_page*,tag_name*,type*}", pathParameters),
+        BaseRequestBuilder: *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewBaseRequestBuilder(requestAdapter, "{+baseurl}/v2/droplets?tag_name={tag_name}{&name*,page*,per_page*,type*}", pathParameters),
     }
     return m
 }
@@ -402,13 +137,12 @@ func (m *DropletsRequestBuilder) Delete(ctx context.Context, requestConfiguratio
     return nil
 }
 // Get to list all Droplets in your account, send a GET request to `/v2/droplets`.The response body will be a JSON object with a key of `droplets`. This will beset to an array containing objects each representing a Droplet. These willcontain the standard Droplet attributes.Note: results are paginated. Use `per_page` and `page` to walk through largefleets, and check `meta.total` for the full count across all pages.### Filtering Results by TagIt's possible to request filtered results by including certain query parameters.To only list Droplets assigned to a specific tag, include the `tag_name` queryparameter set to the name of the tag in your GET request. For example,`/v2/droplets?tag_name=$TAG_NAME`.### GPU DropletsBy default, only non-GPU Droplets are returned. To list only GPU Droplets, setthe `type` query parameter to `gpus`. For example, `/v2/droplets?type=gpus`.
-// Deprecated: This method is obsolete. Use GetAsDropletsGetResponse instead.
-// returns a DropletsRequestBuilder__DropletsResponseable when successful
+// returns a All_droplets_responseable when successful
 // returns a Error error when the service returns a 401 status code
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsRequestBuilder) Get(ctx context.Context, requestConfiguration *DropletsRequestBuilderGetRequestConfiguration)(DropletsRequestBuilder__DropletsResponseable, error) {
+func (m *DropletsRequestBuilder) Get(ctx context.Context, requestConfiguration *DropletsRequestBuilderGetRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.All_droplets_responseable, error) {
     requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
     if err != nil {
         return nil, err
@@ -419,49 +153,22 @@ func (m *DropletsRequestBuilder) Get(ctx context.Context, requestConfiguration *
         "500": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
         "XXX": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, DropletsRequestBuilder__CreateDropletsResponseFromDiscriminatorValue, errorMapping)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateAll_droplets_responseFromDiscriminatorValue, errorMapping)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(DropletsRequestBuilder__DropletsResponseable), nil
-}
-// GetAsDropletsGetResponse to list all Droplets in your account, send a GET request to `/v2/droplets`.The response body will be a JSON object with a key of `droplets`. This will beset to an array containing objects each representing a Droplet. These willcontain the standard Droplet attributes.Note: results are paginated. Use `per_page` and `page` to walk through largefleets, and check `meta.total` for the full count across all pages.### Filtering Results by TagIt's possible to request filtered results by including certain query parameters.To only list Droplets assigned to a specific tag, include the `tag_name` queryparameter set to the name of the tag in your GET request. For example,`/v2/droplets?tag_name=$TAG_NAME`.### GPU DropletsBy default, only non-GPU Droplets are returned. To list only GPU Droplets, setthe `type` query parameter to `gpus`. For example, `/v2/droplets?type=gpus`.
-// returns a DropletsGetResponseable when successful
-// returns a Error error when the service returns a 401 status code
-// returns a Error error when the service returns a 429 status code
-// returns a Error error when the service returns a 500 status code
-// returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsRequestBuilder) GetAsDropletsGetResponse(ctx context.Context, requestConfiguration *DropletsRequestBuilderGetRequestConfiguration)(DropletsGetResponseable, error) {
-    requestInfo, err := m.ToGetRequestInformation(ctx, requestConfiguration);
-    if err != nil {
-        return nil, err
-    }
-    errorMapping := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ErrorMappings {
-        "401": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-        "429": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-        "500": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-        "XXX": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-    }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, CreateDropletsGetResponseFromDiscriminatorValue, errorMapping)
-    if err != nil {
-        return nil, err
-    }
-    if res == nil {
-        return nil, nil
-    }
-    return res.(DropletsGetResponseable), nil
+    return res.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.All_droplets_responseable), nil
 }
 // Post to create a new Droplet, send a POST request to `/v2/droplets` setting therequired attributes.A Droplet will be created using the provided information. The response bodywill contain a JSON object with a key called `droplet`. The value will be anobject containing the standard attributes for your new Droplet. The responsecode, 202 Accepted, does not indicate the success or failure of the operation,just that the request has been accepted for processing. The `actions` returnedas part of the response's `links` object can be used to check the statusof the Droplet create event.### Create Multiple DropletsCreating multiple Droplets is very similar to creating a single Droplet.Instead of sending `name` as a string, send `names` as an array of strings. ADroplet will be created for each name you send using the associatedinformation. Up to ten Droplets may be created this way at a time.Rather than returning a single Droplet, the response body will contain a JSONarray with a key called `droplets`. This will be set to an array of JSONobjects, each of which will contain the standard Droplet attributes. Theresponse code, 202 Accepted, does not indicate the success or failure of anyoperation, just that the request has been accepted for processing. The arrayof `actions` returned as part of the response's `links` object can be used tocheck the status of each individual Droplet create event.
-// Deprecated: This method is obsolete. Use PostAsDropletsPostResponse instead.
-// returns a DropletsRequestBuilder__DropletsResponseable when successful
+// returns a Droplet_create_responseable when successful
 // returns a Error error when the service returns a 401 status code
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsRequestBuilder) Post(ctx context.Context, body DropletsPostRequestBodyable, requestConfiguration *DropletsRequestBuilderPostRequestConfiguration)(DropletsRequestBuilder__DropletsResponseable, error) {
+func (m *DropletsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplets_create_requestable, requestConfiguration *DropletsRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_create_responseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -472,40 +179,14 @@ func (m *DropletsRequestBuilder) Post(ctx context.Context, body DropletsPostRequ
         "500": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
         "XXX": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
     }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, DropletsRequestBuilder__CreateDropletsResponseFromDiscriminatorValue, errorMapping)
+    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateDroplet_create_responseFromDiscriminatorValue, errorMapping)
     if err != nil {
         return nil, err
     }
     if res == nil {
         return nil, nil
     }
-    return res.(DropletsRequestBuilder__DropletsResponseable), nil
-}
-// PostAsDropletsPostResponse to create a new Droplet, send a POST request to `/v2/droplets` setting therequired attributes.A Droplet will be created using the provided information. The response bodywill contain a JSON object with a key called `droplet`. The value will be anobject containing the standard attributes for your new Droplet. The responsecode, 202 Accepted, does not indicate the success or failure of the operation,just that the request has been accepted for processing. The `actions` returnedas part of the response's `links` object can be used to check the statusof the Droplet create event.### Create Multiple DropletsCreating multiple Droplets is very similar to creating a single Droplet.Instead of sending `name` as a string, send `names` as an array of strings. ADroplet will be created for each name you send using the associatedinformation. Up to ten Droplets may be created this way at a time.Rather than returning a single Droplet, the response body will contain a JSONarray with a key called `droplets`. This will be set to an array of JSONobjects, each of which will contain the standard Droplet attributes. Theresponse code, 202 Accepted, does not indicate the success or failure of anyoperation, just that the request has been accepted for processing. The arrayof `actions` returned as part of the response's `links` object can be used tocheck the status of each individual Droplet create event.
-// returns a DropletsPostResponseable when successful
-// returns a Error error when the service returns a 401 status code
-// returns a Error error when the service returns a 429 status code
-// returns a Error error when the service returns a 500 status code
-// returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsRequestBuilder) PostAsDropletsPostResponse(ctx context.Context, body DropletsPostRequestBodyable, requestConfiguration *DropletsRequestBuilderPostRequestConfiguration)(DropletsPostResponseable, error) {
-    requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
-    if err != nil {
-        return nil, err
-    }
-    errorMapping := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.ErrorMappings {
-        "401": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-        "429": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-        "500": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-        "XXX": i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateErrorFromDiscriminatorValue,
-    }
-    res, err := m.BaseRequestBuilder.RequestAdapter.Send(ctx, requestInfo, CreateDropletsPostResponseFromDiscriminatorValue, errorMapping)
-    if err != nil {
-        return nil, err
-    }
-    if res == nil {
-        return nil, nil
-    }
-    return res.(DropletsPostResponseable), nil
+    return res.(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_create_responseable), nil
 }
 // ToDeleteRequestInformation to delete **all** Droplets assigned to a specific tag, include the `tag_name`query parameter set to the name of the tag in your DELETE request. Forexample, `/v2/droplets?tag_name=$TAG_NAME`.This endpoint requires `tag:read` scope.A successful request will receive a 204 status code with no body in response.This indicates that the request was processed successfully.
 // returns a *RequestInformation when successful
@@ -524,7 +205,7 @@ func (m *DropletsRequestBuilder) ToDeleteRequestInformation(ctx context.Context,
 // ToGetRequestInformation to list all Droplets in your account, send a GET request to `/v2/droplets`.The response body will be a JSON object with a key of `droplets`. This will beset to an array containing objects each representing a Droplet. These willcontain the standard Droplet attributes.Note: results are paginated. Use `per_page` and `page` to walk through largefleets, and check `meta.total` for the full count across all pages.### Filtering Results by TagIt's possible to request filtered results by including certain query parameters.To only list Droplets assigned to a specific tag, include the `tag_name` queryparameter set to the name of the tag in your GET request. For example,`/v2/droplets?tag_name=$TAG_NAME`.### GPU DropletsBy default, only non-GPU Droplets are returned. To list only GPU Droplets, setthe `type` query parameter to `gpus`. For example, `/v2/droplets?type=gpus`.
 // returns a *RequestInformation when successful
 func (m *DropletsRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *DropletsRequestBuilderGetRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
-    requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
+    requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.GET, "{+baseurl}/v2/droplets{?name*,page*,per_page*,tag_name*,type*}", m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         if requestConfiguration.QueryParameters != nil {
             requestInfo.AddQueryParameters(*(requestConfiguration.QueryParameters))
@@ -537,7 +218,7 @@ func (m *DropletsRequestBuilder) ToGetRequestInformation(ctx context.Context, re
 }
 // ToPostRequestInformation to create a new Droplet, send a POST request to `/v2/droplets` setting therequired attributes.A Droplet will be created using the provided information. The response bodywill contain a JSON object with a key called `droplet`. The value will be anobject containing the standard attributes for your new Droplet. The responsecode, 202 Accepted, does not indicate the success or failure of the operation,just that the request has been accepted for processing. The `actions` returnedas part of the response's `links` object can be used to check the statusof the Droplet create event.### Create Multiple DropletsCreating multiple Droplets is very similar to creating a single Droplet.Instead of sending `name` as a string, send `names` as an array of strings. ADroplet will be created for each name you send using the associatedinformation. Up to ten Droplets may be created this way at a time.Rather than returning a single Droplet, the response body will contain a JSONarray with a key called `droplets`. This will be set to an array of JSONobjects, each of which will contain the standard Droplet attributes. Theresponse code, 202 Accepted, does not indicate the success or failure of anyoperation, just that the request has been accepted for processing. The arrayof `actions` returned as part of the response's `links` object can be used tocheck the status of each individual Droplet create event.
 // returns a *RequestInformation when successful
-func (m *DropletsRequestBuilder) ToPostRequestInformation(ctx context.Context, body DropletsPostRequestBodyable, requestConfiguration *DropletsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DropletsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplets_create_requestable, requestConfiguration *DropletsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, "{+baseurl}/v2/droplets", m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

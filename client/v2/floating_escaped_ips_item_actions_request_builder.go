@@ -15,23 +15,23 @@ import (
 type Floating_ipsItemActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable
-type FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody struct {
+// Floating_ips_action_post_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable
+type Floating_ips_action_post_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable
     floating_ip_action_assign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable
     floating_ip_action_unassign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable
 }
-// FloatingEscapedIpsItemActionsRequestBuilder__NewActionsPostRequestBody instantiates a new FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func FloatingEscapedIpsItemActionsRequestBuilder__NewActionsPostRequestBody()(*FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody{
+// NewFloating_ips_action_post_request instantiates a new Floating_ips_action_post_request and sets the default values.
+func NewFloating_ips_action_post_request()(*Floating_ips_action_post_request) {
+    m := &Floating_ips_action_post_request{
     }
     return m
 }
-// FloatingEscapedIpsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateFloating_ips_action_post_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func FloatingEscapedIpsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := FloatingEscapedIpsItemActionsRequestBuilder__NewActionsPostRequestBody()
+func CreateFloating_ips_action_post_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewFloating_ips_action_post_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateFloating_ip_action_assignFromDiscriminatorValue); val != nil {
             if err != nil {
@@ -53,26 +53,26 @@ func FloatingEscapedIpsItemActionsRequestBuilder__CreateActionsPostRequestBodyFr
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Floating_ips_action_post_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetFloatingIpActionAssign gets the floating_ip_action_assign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable
 // returns a Floating_ip_action_assignable when successful
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetFloatingIpActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable) {
+func (m *Floating_ips_action_post_request) GetFloatingIpActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable) {
     return m.floating_ip_action_assign
 }
 // GetFloatingIpActionUnassign gets the floating_ip_action_unassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable
 // returns a Floating_ip_action_unassignable when successful
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetFloatingIpActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable) {
+func (m *Floating_ips_action_post_request) GetFloatingIpActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable) {
     return m.floating_ip_action_unassign
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Floating_ips_action_post_request) GetIsComposedType()(bool) {
     return true
 }
 // Serialize serializes information the current object
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Floating_ips_action_post_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetFloatingIpActionAssign() != nil {
         err := writer.WriteObjectValue("", m.GetFloatingIpActionAssign())
         if err != nil {
@@ -87,11 +87,11 @@ func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) Se
     return nil
 }
 // SetFloatingIpActionAssign sets the floating_ip_action_assign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) SetFloatingIpActionAssign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable)() {
+func (m *Floating_ips_action_post_request) SetFloatingIpActionAssign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable)() {
     m.floating_ip_action_assign = value
 }
 // SetFloatingIpActionUnassign sets the floating_ip_action_unassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable
-func (m *FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) SetFloatingIpActionUnassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable)() {
+func (m *Floating_ips_action_post_request) SetFloatingIpActionUnassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable)() {
     m.floating_ip_action_unassign = value
 }
 // Floating_ipsItemActionsRequestBuilderGetRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
@@ -108,7 +108,7 @@ type Floating_ipsItemActionsRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-type FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable interface {
+type Floating_ips_action_post_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetFloatingIpActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_assignable)
     GetFloatingIpActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ip_action_unassignable)
@@ -216,7 +216,7 @@ func (m *Floating_ipsItemActionsRequestBuilder) GetAsActionsGetResponse(ctx cont
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Floating_ipsItemActionsRequestBuilder) Post(ctx context.Context, body FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Floating_ipsItemActionsRequestBuilderPostRequestConfiguration)(Floating_ipsItemActionsResponseable, error) {
+func (m *Floating_ipsItemActionsRequestBuilder) Post(ctx context.Context, body Floating_ips_action_post_requestable, requestConfiguration *Floating_ipsItemActionsRequestBuilderPostRequestConfiguration)(Floating_ipsItemActionsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -244,7 +244,7 @@ func (m *Floating_ipsItemActionsRequestBuilder) Post(ctx context.Context, body F
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Floating_ipsItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Floating_ipsItemActionsRequestBuilderPostRequestConfiguration)(Floating_ipsItemActionsPostResponseable, error) {
+func (m *Floating_ipsItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ips_action_post_requestable, requestConfiguration *Floating_ipsItemActionsRequestBuilderPostRequestConfiguration)(Floating_ipsItemActionsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -278,7 +278,7 @@ func (m *Floating_ipsItemActionsRequestBuilder) ToGetRequestInformation(ctx cont
 }
 // ToPostRequestInformation to initiate an action on a floating IP send a POST request to`/v2/floating_ips/$FLOATING_IP/actions`. In the JSON body to the request,set the `type` attribute to on of the supported action types:| Action     | Details|------------|--------| `assign`   | Assigns a floating IP to a Droplet| `unassign` | Unassign a floating IP from a Droplet
 // returns a *RequestInformation when successful
-func (m *Floating_ipsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body FloatingEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Floating_ipsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Floating_ipsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Floating_ips_action_post_requestable, requestConfiguration *Floating_ipsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

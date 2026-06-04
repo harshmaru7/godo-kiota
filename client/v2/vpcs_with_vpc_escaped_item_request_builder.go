@@ -148,7 +148,7 @@ func (m *VpcsWithVpc_ItemRequestBuilder) Members()(*VpcsItemMembersRequestBuilde
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsWithVpc_ItemRequestBuilder) Patch(ctx context.Context, body VpcsItemWithVpc_PatchRequestBodyable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPatchRequestConfiguration)(VpcsItemWithVpc_Responseable, error) {
+func (m *VpcsWithVpc_ItemRequestBuilder) Patch(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_patch_requestable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPatchRequestConfiguration)(VpcsItemWithVpc_Responseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -176,7 +176,7 @@ func (m *VpcsWithVpc_ItemRequestBuilder) Patch(ctx context.Context, body VpcsIte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsWithVpc_ItemRequestBuilder) PatchAsWithVpc_PatchResponse(ctx context.Context, body VpcsItemWithVpc_PatchRequestBodyable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPatchRequestConfiguration)(VpcsItemWithVpc_PatchResponseable, error) {
+func (m *VpcsWithVpc_ItemRequestBuilder) PatchAsWithVpc_PatchResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_patch_requestable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPatchRequestConfiguration)(VpcsItemWithVpc_PatchResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -210,7 +210,7 @@ func (m *VpcsWithVpc_ItemRequestBuilder) Peerings()(*VpcsItemPeeringsRequestBuil
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsWithVpc_ItemRequestBuilder) Put(ctx context.Context, body VpcsItemWithVpc_PutRequestBodyable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPutRequestConfiguration)(VpcsItemWithVpc_Responseable, error) {
+func (m *VpcsWithVpc_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_update_requestable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPutRequestConfiguration)(VpcsItemWithVpc_Responseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -238,7 +238,7 @@ func (m *VpcsWithVpc_ItemRequestBuilder) Put(ctx context.Context, body VpcsItemW
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VpcsWithVpc_ItemRequestBuilder) PutAsWithVpc_PutResponse(ctx context.Context, body VpcsItemWithVpc_PutRequestBodyable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPutRequestConfiguration)(VpcsItemWithVpc_PutResponseable, error) {
+func (m *VpcsWithVpc_ItemRequestBuilder) PutAsWithVpc_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_update_requestable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPutRequestConfiguration)(VpcsItemWithVpc_PutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -283,7 +283,7 @@ func (m *VpcsWithVpc_ItemRequestBuilder) ToGetRequestInformation(ctx context.Con
 }
 // ToPatchRequestInformation to update a subset of information about a VPC, send a PATCH request to`/v2/vpcs/$VPC_ID`.
 // returns a *RequestInformation when successful
-func (m *VpcsWithVpc_ItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body VpcsItemWithVpc_PatchRequestBodyable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPatchRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VpcsWithVpc_ItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_patch_requestable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPatchRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PATCH, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)
@@ -298,7 +298,7 @@ func (m *VpcsWithVpc_ItemRequestBuilder) ToPatchRequestInformation(ctx context.C
 }
 // ToPutRequestInformation to update information about a VPC, send a PUT request to `/v2/vpcs/$VPC_ID`.
 // returns a *RequestInformation when successful
-func (m *VpcsWithVpc_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body VpcsItemWithVpc_PutRequestBodyable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VpcsWithVpc_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpcs_update_requestable, requestConfiguration *VpcsWithVpc_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

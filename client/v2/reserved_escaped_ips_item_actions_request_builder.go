@@ -15,23 +15,23 @@ import (
 type Reserved_ipsItemActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable
-type ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody struct {
+// Reserved_ips_actions_post_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable
+type Reserved_ips_actions_post_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable
     reserved_ip_action_assign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable
     reserved_ip_action_unassign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable
 }
-// ReservedEscapedIpsItemActionsRequestBuilder__NewActionsPostRequestBody instantiates a new ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func ReservedEscapedIpsItemActionsRequestBuilder__NewActionsPostRequestBody()(*ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody{
+// NewReserved_ips_actions_post_request instantiates a new Reserved_ips_actions_post_request and sets the default values.
+func NewReserved_ips_actions_post_request()(*Reserved_ips_actions_post_request) {
+    m := &Reserved_ips_actions_post_request{
     }
     return m
 }
-// ReservedEscapedIpsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateReserved_ips_actions_post_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func ReservedEscapedIpsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := ReservedEscapedIpsItemActionsRequestBuilder__NewActionsPostRequestBody()
+func CreateReserved_ips_actions_post_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewReserved_ips_actions_post_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateReserved_ip_action_assignFromDiscriminatorValue); val != nil {
             if err != nil {
@@ -53,26 +53,26 @@ func ReservedEscapedIpsItemActionsRequestBuilder__CreateActionsPostRequestBodyFr
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Reserved_ips_actions_post_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Reserved_ips_actions_post_request) GetIsComposedType()(bool) {
     return true
 }
 // GetReservedIpActionAssign gets the reserved_ip_action_assign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable
 // returns a Reserved_ip_action_assignable when successful
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetReservedIpActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable) {
+func (m *Reserved_ips_actions_post_request) GetReservedIpActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable) {
     return m.reserved_ip_action_assign
 }
 // GetReservedIpActionUnassign gets the reserved_ip_action_unassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable
 // returns a Reserved_ip_action_unassignable when successful
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) GetReservedIpActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable) {
+func (m *Reserved_ips_actions_post_request) GetReservedIpActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable) {
     return m.reserved_ip_action_unassign
 }
 // Serialize serializes information the current object
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Reserved_ips_actions_post_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetReservedIpActionAssign() != nil {
         err := writer.WriteObjectValue("", m.GetReservedIpActionAssign())
         if err != nil {
@@ -87,11 +87,11 @@ func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) Se
     return nil
 }
 // SetReservedIpActionAssign sets the reserved_ip_action_assign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) SetReservedIpActionAssign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable)() {
+func (m *Reserved_ips_actions_post_request) SetReservedIpActionAssign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable)() {
     m.reserved_ip_action_assign = value
 }
 // SetReservedIpActionUnassign sets the reserved_ip_action_unassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable
-func (m *ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBody) SetReservedIpActionUnassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable)() {
+func (m *Reserved_ips_actions_post_request) SetReservedIpActionUnassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable)() {
     m.reserved_ip_action_unassign = value
 }
 // Reserved_ipsItemActionsRequestBuilderGetRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
@@ -108,7 +108,7 @@ type Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-type ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable interface {
+type Reserved_ips_actions_post_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetReservedIpActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_assignable)
     GetReservedIpActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ip_action_unassignable)
@@ -216,7 +216,7 @@ func (m *Reserved_ipsItemActionsRequestBuilder) GetAsActionsGetResponse(ctx cont
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Reserved_ipsItemActionsRequestBuilder) Post(ctx context.Context, body ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipsItemActionsResponseable, error) {
+func (m *Reserved_ipsItemActionsRequestBuilder) Post(ctx context.Context, body Reserved_ips_actions_post_requestable, requestConfiguration *Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipsItemActionsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -244,7 +244,7 @@ func (m *Reserved_ipsItemActionsRequestBuilder) Post(ctx context.Context, body R
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Reserved_ipsItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipsItemActionsPostResponseable, error) {
+func (m *Reserved_ipsItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ips_actions_post_requestable, requestConfiguration *Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipsItemActionsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -278,7 +278,7 @@ func (m *Reserved_ipsItemActionsRequestBuilder) ToGetRequestInformation(ctx cont
 }
 // ToPostRequestInformation to initiate an action on a reserved IP send a POST request to`/v2/reserved_ips/$RESERVED_IP/actions`. In the JSON body to the request,set the `type` attribute to on of the supported action types:| Action     | Details|------------|--------| `assign`   | Assigns a reserved IP to a Droplet| `unassign` | Unassign a reserved IP from a Droplet
 // returns a *RequestInformation when successful
-func (m *Reserved_ipsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ReservedEscapedIpsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Reserved_ipsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ips_actions_post_requestable, requestConfiguration *Reserved_ipsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

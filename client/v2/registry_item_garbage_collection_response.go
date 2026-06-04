@@ -7,14 +7,14 @@ import (
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
 )
 
-// Deprecated: This class is obsolete. Use RegistryItemGarbageCollectionPostResponseable instead.
+// Deprecated: This class is obsolete. Use RegistryItemGarbageCollectionGetResponseable instead.
 type RegistryItemGarbageCollectionResponse struct {
-    RegistryItemGarbageCollectionPostResponse
+    RegistryItemGarbageCollectionGetResponse
 }
 // NewRegistryItemGarbageCollectionResponse instantiates a new RegistryItemGarbageCollectionResponse and sets the default values.
 func NewRegistryItemGarbageCollectionResponse()(*RegistryItemGarbageCollectionResponse) {
     m := &RegistryItemGarbageCollectionResponse{
-        RegistryItemGarbageCollectionPostResponse: *NewRegistryItemGarbageCollectionPostResponse(),
+        RegistryItemGarbageCollectionGetResponse: *NewRegistryItemGarbageCollectionGetResponse(),
     }
     return m
 }
@@ -23,8 +23,8 @@ func NewRegistryItemGarbageCollectionResponse()(*RegistryItemGarbageCollectionRe
 func CreateRegistryItemGarbageCollectionResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewRegistryItemGarbageCollectionResponse(), nil
 }
-// Deprecated: This class is obsolete. Use RegistryItemGarbageCollectionPostResponseable instead.
+// Deprecated: This class is obsolete. Use RegistryItemGarbageCollectionGetResponseable instead.
 type RegistryItemGarbageCollectionResponseable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    RegistryItemGarbageCollectionPostResponseable
+    RegistryItemGarbageCollectionGetResponseable
 }

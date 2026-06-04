@@ -16,6 +16,7 @@ import (
 	"net/url"
 	"sort"
 	"strings"
+	"sync"
 )
 
 // DefaultInferenceBaseURL is the production Serverless Inference endpoint.
@@ -158,7 +159,7 @@ func (c *InferenceClient) doSSE(ctx context.Context, path string, body any) (*SS
 		cancel()
 		return nil, &InferenceError{Status: resp.StatusCode, Body: string(data)}
 	}
-	s := &SSEStream{ch: make(chan sseItem, 16), cancel: cancel}
+	s := &SSEStream{ch: make(chan sseItem, 16), cancel: cancel, done: make(chan struct{})}
 	go s.read(resp.Body)
 	return s, nil
 }
@@ -206,10 +207,14 @@ type StreamCallbacks struct {
 	OnComplete func()
 }
 
-// SSEStream is an iterator over server-sent inference events.
+// SSEStream is an iterator over server-sent inference events. It is safe to
+// Close at any time — including mid-stream — without leaking the reader
+// goroutine.
 type SSEStream struct {
 	ch     chan sseItem
 	cancel context.CancelFunc
+	done   chan struct{}
+	once   sync.Once
 }
 
 // Recv returns the next event, or io.EOF when the stream completes.
@@ -224,9 +229,12 @@ func (s *SSEStream) Recv() (map[string]any, error) {
 	return item.data, nil
 }
 
-// Close stops the stream and releases resources.
+// Close stops the stream and releases resources. Safe to call multiple times.
 func (s *SSEStream) Close() error {
-	s.cancel()
+	s.once.Do(func() {
+		close(s.done) // unblock the reader if it is parked on a channel send
+		s.cancel()    // cancel the request so a blocked Read returns
+	})
 	return nil
 }
 
@@ -253,31 +261,67 @@ func (s *SSEStream) Consume(cb StreamCallbacks) error {
 	}
 }
 
+// read parses the text/event-stream body per the SSE spec: events are
+// separated by blank lines; an event's payload is the "\n"-joined value of its
+// "data:" fields; lines beginning with ":" are comments/keep-alives; "event:",
+// "id:" and "retry:" fields are ignored (callers consume the JSON data). A
+// payload of "[DONE]" terminates the stream. A trailing event with no closing
+// blank line is still flushed.
 func (s *SSEStream) read(body io.ReadCloser) {
 	defer close(s.ch)
 	defer body.Close()
+
 	sc := bufio.NewScanner(body)
 	sc.Buffer(make([]byte, 0, 64*1024), 8*1024*1024)
-	for sc.Scan() {
-		line := strings.TrimRight(sc.Text(), "\r")
-		if !strings.HasPrefix(line, "data:") {
-			continue
+
+	var data []string
+
+	// emit sends one item, respecting early Close. Returns false to stop.
+	emit := func(it sseItem) bool {
+		select {
+		case s.ch <- it:
+			return true
+		case <-s.done:
+			return false
 		}
-		payload := strings.TrimSpace(line[len("data:"):])
-		if payload == "" {
-			continue
+	}
+	// dispatch flushes the accumulated data lines as one event.
+	// Returns false when the stream should stop (DONE or early Close).
+	dispatch := func() bool {
+		if len(data) == 0 {
+			return true
 		}
+		payload := strings.Join(data, "\n")
+		data = data[:0]
 		if payload == "[DONE]" {
-			return
+			return false
 		}
 		var m map[string]any
 		if err := json.Unmarshal([]byte(payload), &m); err != nil {
-			s.ch <- sseItem{data: map[string]any{"_raw": payload}}
+			return emit(sseItem{data: map[string]any{"_raw": payload}})
+		}
+		return emit(sseItem{data: m})
+	}
+
+	for sc.Scan() {
+		line := strings.TrimRight(sc.Text(), "\r")
+		switch {
+		case line == "": // event boundary
+			if !dispatch() {
+				return
+			}
+		case strings.HasPrefix(line, ":"): // comment / keep-alive
+			continue
+		case strings.HasPrefix(line, "data:"):
+			data = append(data, strings.TrimPrefix(line[len("data:"):], " "))
+		default: // event:, id:, retry: and unknown fields — ignored
 			continue
 		}
-		s.ch <- sseItem{data: m}
+	}
+	if !dispatch() { // flush a final event with no trailing blank line
+		return
 	}
 	if err := sc.Err(); err != nil {
-		s.ch <- sseItem{err: err}
+		emit(sseItem{err: err})
 	}
 }

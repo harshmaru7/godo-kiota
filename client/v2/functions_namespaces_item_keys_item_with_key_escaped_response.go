@@ -7,14 +7,14 @@ import (
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
 )
 
-// Deprecated: This class is obsolete. Use FunctionsNamespacesItemKeysItemWithKey_PutResponseable instead.
+// Deprecated: This class is obsolete. Use FunctionsNamespacesItemKeysItemWithKey_DeleteResponseable instead.
 type FunctionsNamespacesItemKeysItemWithKey_Response struct {
-    FunctionsNamespacesItemKeysItemWithKey_PutResponse
+    FunctionsNamespacesItemKeysItemWithKey_DeleteResponse
 }
 // NewFunctionsNamespacesItemKeysItemWithKey_Response instantiates a new FunctionsNamespacesItemKeysItemWithKey_Response and sets the default values.
 func NewFunctionsNamespacesItemKeysItemWithKey_Response()(*FunctionsNamespacesItemKeysItemWithKey_Response) {
     m := &FunctionsNamespacesItemKeysItemWithKey_Response{
-        FunctionsNamespacesItemKeysItemWithKey_PutResponse: *NewFunctionsNamespacesItemKeysItemWithKey_PutResponse(),
+        FunctionsNamespacesItemKeysItemWithKey_DeleteResponse: *NewFunctionsNamespacesItemKeysItemWithKey_DeleteResponse(),
     }
     return m
 }
@@ -23,8 +23,8 @@ func NewFunctionsNamespacesItemKeysItemWithKey_Response()(*FunctionsNamespacesIt
 func CreateFunctionsNamespacesItemKeysItemWithKey_ResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewFunctionsNamespacesItemKeysItemWithKey_Response(), nil
 }
-// Deprecated: This class is obsolete. Use FunctionsNamespacesItemKeysItemWithKey_PutResponseable instead.
+// Deprecated: This class is obsolete. Use FunctionsNamespacesItemKeysItemWithKey_DeleteResponseable instead.
 type FunctionsNamespacesItemKeysItemWithKey_Responseable interface {
-    FunctionsNamespacesItemKeysItemWithKey_PutResponseable
+    FunctionsNamespacesItemKeysItemWithKey_DeleteResponseable
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
 }

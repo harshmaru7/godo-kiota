@@ -47,7 +47,7 @@ func NewFirewallsItemTagsRequestBuilder(rawUrl string, requestAdapter i2ae4187f7
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsItemTagsRequestBuilder) Delete(ctx context.Context, body FirewallsItemTagsDeleteRequestBodyable, requestConfiguration *FirewallsItemTagsRequestBuilderDeleteRequestConfiguration)(error) {
+func (m *FirewallsItemTagsRequestBuilder) Delete(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_delete_tags_requestable, requestConfiguration *FirewallsItemTagsRequestBuilderDeleteRequestConfiguration)(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -73,7 +73,7 @@ func (m *FirewallsItemTagsRequestBuilder) Delete(ctx context.Context, body Firew
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsItemTagsRequestBuilder) Post(ctx context.Context, body FirewallsItemTagsPostRequestBodyable, requestConfiguration *FirewallsItemTagsRequestBuilderPostRequestConfiguration)(error) {
+func (m *FirewallsItemTagsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_add_tags_requestable, requestConfiguration *FirewallsItemTagsRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -94,7 +94,7 @@ func (m *FirewallsItemTagsRequestBuilder) Post(ctx context.Context, body Firewal
 }
 // ToDeleteRequestInformation to remove a tag representing a group of Droplets from a firewall, send aDELETE request to `/v2/firewalls/$FIREWALL_ID/tags`. In the body of therequest, there should be a `tags` attribute containing a list of tag names.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *FirewallsItemTagsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body FirewallsItemTagsDeleteRequestBodyable, requestConfiguration *FirewallsItemTagsRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsItemTagsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_delete_tags_requestable, requestConfiguration *FirewallsItemTagsRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)
@@ -109,7 +109,7 @@ func (m *FirewallsItemTagsRequestBuilder) ToDeleteRequestInformation(ctx context
 }
 // ToPostRequestInformation to assign a tag representing a group of Droplets to a firewall, send a POSTrequest to `/v2/firewalls/$FIREWALL_ID/tags`. In the body of the request,there should be a `tags` attribute containing a list of tag names.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *FirewallsItemTagsRequestBuilder) ToPostRequestInformation(ctx context.Context, body FirewallsItemTagsPostRequestBodyable, requestConfiguration *FirewallsItemTagsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsItemTagsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_add_tags_requestable, requestConfiguration *FirewallsItemTagsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

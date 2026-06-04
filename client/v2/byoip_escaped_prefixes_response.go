@@ -7,14 +7,14 @@ import (
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
 )
 
-// Deprecated: This class is obsolete. Use Byoip_prefixesPostResponseable instead.
+// Deprecated: This class is obsolete. Use Byoip_prefixesGetResponseable instead.
 type Byoip_prefixesResponse struct {
-    Byoip_prefixesPostResponse
+    Byoip_prefixesGetResponse
 }
 // NewByoip_prefixesResponse instantiates a new Byoip_prefixesResponse and sets the default values.
 func NewByoip_prefixesResponse()(*Byoip_prefixesResponse) {
     m := &Byoip_prefixesResponse{
-        Byoip_prefixesPostResponse: *NewByoip_prefixesPostResponse(),
+        Byoip_prefixesGetResponse: *NewByoip_prefixesGetResponse(),
     }
     return m
 }
@@ -23,8 +23,8 @@ func NewByoip_prefixesResponse()(*Byoip_prefixesResponse) {
 func CreateByoip_prefixesResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewByoip_prefixesResponse(), nil
 }
-// Deprecated: This class is obsolete. Use Byoip_prefixesPostResponseable instead.
+// Deprecated: This class is obsolete. Use Byoip_prefixesGetResponseable instead.
 type Byoip_prefixesResponseable interface {
-    Byoip_prefixesPostResponseable
+    Byoip_prefixesGetResponseable
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
 }

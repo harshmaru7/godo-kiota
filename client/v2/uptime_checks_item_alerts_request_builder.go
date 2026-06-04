@@ -138,7 +138,7 @@ func (m *UptimeChecksItemAlertsRequestBuilder) GetAsAlertsGetResponse(ctx contex
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *UptimeChecksItemAlertsRequestBuilder) Post(ctx context.Context, body UptimeChecksItemAlertsPostRequestBodyable, requestConfiguration *UptimeChecksItemAlertsRequestBuilderPostRequestConfiguration)(UptimeChecksItemAlertsResponseable, error) {
+func (m *UptimeChecksItemAlertsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_create_alert_requestable, requestConfiguration *UptimeChecksItemAlertsRequestBuilderPostRequestConfiguration)(UptimeChecksItemAlertsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -166,7 +166,7 @@ func (m *UptimeChecksItemAlertsRequestBuilder) Post(ctx context.Context, body Up
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *UptimeChecksItemAlertsRequestBuilder) PostAsAlertsPostResponse(ctx context.Context, body UptimeChecksItemAlertsPostRequestBodyable, requestConfiguration *UptimeChecksItemAlertsRequestBuilderPostRequestConfiguration)(UptimeChecksItemAlertsPostResponseable, error) {
+func (m *UptimeChecksItemAlertsRequestBuilder) PostAsAlertsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_create_alert_requestable, requestConfiguration *UptimeChecksItemAlertsRequestBuilderPostRequestConfiguration)(UptimeChecksItemAlertsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -203,7 +203,7 @@ func (m *UptimeChecksItemAlertsRequestBuilder) ToGetRequestInformation(ctx conte
 }
 // ToPostRequestInformation to create an Uptime alert, send a POST request to `/v2/uptime/checks/$CHECK_ID/alerts` specifying the attributesin the table below in the JSON body.
 // returns a *RequestInformation when successful
-func (m *UptimeChecksItemAlertsRequestBuilder) ToPostRequestInformation(ctx context.Context, body UptimeChecksItemAlertsPostRequestBodyable, requestConfiguration *UptimeChecksItemAlertsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *UptimeChecksItemAlertsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_create_alert_requestable, requestConfiguration *UptimeChecksItemAlertsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

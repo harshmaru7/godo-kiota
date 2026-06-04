@@ -15,8 +15,8 @@ import (
 type DropletsItemActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// DropletsItemActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
-type DropletsItemActionsRequestBuilder__ActionsPostRequestBody struct {
+// Droplet_actions_post_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
+type Droplet_actions_post_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
     droplet_action i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable
@@ -36,16 +36,16 @@ type DropletsItemActionsRequestBuilder__ActionsPostRequestBody struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
     droplet_action_snapshot i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
 }
-// DropletsItemActionsRequestBuilder__NewActionsPostRequestBody instantiates a new DropletsItemActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func DropletsItemActionsRequestBuilder__NewActionsPostRequestBody()(*DropletsItemActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &DropletsItemActionsRequestBuilder__ActionsPostRequestBody{
+// NewDroplet_actions_post_request instantiates a new Droplet_actions_post_request and sets the default values.
+func NewDroplet_actions_post_request()(*Droplet_actions_post_request) {
+    m := &Droplet_actions_post_request{
     }
     return m
 }
-// DropletsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateDroplet_actions_post_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func DropletsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := DropletsItemActionsRequestBuilder__NewActionsPostRequestBody()
+func CreateDroplet_actions_post_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewDroplet_actions_post_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateDroplet_actionFromDiscriminatorValue); val != nil {
             if err != nil {
@@ -116,61 +116,61 @@ func DropletsItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscrimi
 }
 // GetDropletAction gets the droplet_action property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
 // returns a Droplet_actionable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletAction()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable) {
+func (m *Droplet_actions_post_request) GetDropletAction()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable) {
     return m.droplet_action
 }
 // GetDropletActionChangeBackupPolicy gets the droplet_action_change_backup_policy property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable
 // returns a Droplet_action_change_backup_policyable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionChangeBackupPolicy()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable) {
+func (m *Droplet_actions_post_request) GetDropletActionChangeBackupPolicy()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable) {
     return m.droplet_action_change_backup_policy
 }
 // GetDropletActionChangeKernel gets the droplet_action_change_kernel property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable
 // returns a Droplet_action_change_kernelable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionChangeKernel()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable) {
+func (m *Droplet_actions_post_request) GetDropletActionChangeKernel()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable) {
     return m.droplet_action_change_kernel
 }
 // GetDropletActionEnableBackups gets the droplet_action_enable_backups property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable
 // returns a Droplet_action_enable_backupsable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionEnableBackups()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable) {
+func (m *Droplet_actions_post_request) GetDropletActionEnableBackups()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable) {
     return m.droplet_action_enable_backups
 }
 // GetDropletActionRebuild gets the droplet_action_rebuild property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable
 // returns a Droplet_action_rebuildable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionRebuild()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable) {
+func (m *Droplet_actions_post_request) GetDropletActionRebuild()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable) {
     return m.droplet_action_rebuild
 }
 // GetDropletActionRename gets the droplet_action_rename property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable
 // returns a Droplet_action_renameable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionRename()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable) {
+func (m *Droplet_actions_post_request) GetDropletActionRename()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable) {
     return m.droplet_action_rename
 }
 // GetDropletActionResize gets the droplet_action_resize property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable
 // returns a Droplet_action_resizeable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionResize()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable) {
+func (m *Droplet_actions_post_request) GetDropletActionResize()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable) {
     return m.droplet_action_resize
 }
 // GetDropletActionRestore gets the droplet_action_restore property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable
 // returns a Droplet_action_restoreable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionRestore()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable) {
+func (m *Droplet_actions_post_request) GetDropletActionRestore()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable) {
     return m.droplet_action_restore
 }
 // GetDropletActionSnapshot gets the droplet_action_snapshot property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
 // returns a Droplet_action_snapshotable when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetDropletActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable) {
+func (m *Droplet_actions_post_request) GetDropletActionSnapshot()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable) {
     return m.droplet_action_snapshot
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Droplet_actions_post_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Droplet_actions_post_request) GetIsComposedType()(bool) {
     return true
 }
 // Serialize serializes information the current object
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Droplet_actions_post_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetDropletAction() != nil {
         err := writer.WriteObjectValue("", m.GetDropletAction())
         if err != nil {
@@ -220,39 +220,39 @@ func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(wr
     return nil
 }
 // SetDropletAction sets the droplet_action property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletAction(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable)() {
+func (m *Droplet_actions_post_request) SetDropletAction(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable)() {
     m.droplet_action = value
 }
 // SetDropletActionChangeBackupPolicy sets the droplet_action_change_backup_policy property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionChangeBackupPolicy(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable)() {
+func (m *Droplet_actions_post_request) SetDropletActionChangeBackupPolicy(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable)() {
     m.droplet_action_change_backup_policy = value
 }
 // SetDropletActionChangeKernel sets the droplet_action_change_kernel property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionChangeKernel(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable)() {
+func (m *Droplet_actions_post_request) SetDropletActionChangeKernel(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_kernelable)() {
     m.droplet_action_change_kernel = value
 }
 // SetDropletActionEnableBackups sets the droplet_action_enable_backups property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionEnableBackups(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable)() {
+func (m *Droplet_actions_post_request) SetDropletActionEnableBackups(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_enable_backupsable)() {
     m.droplet_action_enable_backups = value
 }
 // SetDropletActionRebuild sets the droplet_action_rebuild property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionRebuild(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable)() {
+func (m *Droplet_actions_post_request) SetDropletActionRebuild(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_rebuildable)() {
     m.droplet_action_rebuild = value
 }
 // SetDropletActionRename sets the droplet_action_rename property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionRename(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable)() {
+func (m *Droplet_actions_post_request) SetDropletActionRename(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_renameable)() {
     m.droplet_action_rename = value
 }
 // SetDropletActionResize sets the droplet_action_resize property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionResize(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable)() {
+func (m *Droplet_actions_post_request) SetDropletActionResize(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_resizeable)() {
     m.droplet_action_resize = value
 }
 // SetDropletActionRestore sets the droplet_action_restore property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionRestore(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable)() {
+func (m *Droplet_actions_post_request) SetDropletActionRestore(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_restoreable)() {
     m.droplet_action_restore = value
 }
 // SetDropletActionSnapshot sets the droplet_action_snapshot property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable
-func (m *DropletsItemActionsRequestBuilder__ActionsPostRequestBody) SetDropletActionSnapshot(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable)() {
+func (m *Droplet_actions_post_request) SetDropletActionSnapshot(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_snapshotable)() {
     m.droplet_action_snapshot = value
 }
 // DropletsItemActionsRequestBuilderGetQueryParameters to retrieve a list of all actions that have been executed for a Droplet, senda GET request to `/v2/droplets/$DROPLET_ID/actions`.The results will be returned as a JSON object with an `actions` key. This willbe set to an array filled with `action` objects containing the standard`action` attributes.
@@ -278,7 +278,7 @@ type DropletsItemActionsRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-type DropletsItemActionsRequestBuilder__ActionsPostRequestBodyable interface {
+type Droplet_actions_post_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetDropletAction()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actionable)
     GetDropletActionChangeBackupPolicy()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_action_change_backup_policyable)
@@ -400,7 +400,7 @@ func (m *DropletsItemActionsRequestBuilder) GetAsActionsGetResponse(ctx context.
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsItemActionsRequestBuilder) Post(ctx context.Context, body DropletsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *DropletsItemActionsRequestBuilderPostRequestConfiguration)(DropletsItemActionsResponseable, error) {
+func (m *DropletsItemActionsRequestBuilder) Post(ctx context.Context, body Droplet_actions_post_requestable, requestConfiguration *DropletsItemActionsRequestBuilderPostRequestConfiguration)(DropletsItemActionsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -428,7 +428,7 @@ func (m *DropletsItemActionsRequestBuilder) Post(ctx context.Context, body Dropl
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DropletsItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body DropletsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *DropletsItemActionsRequestBuilderPostRequestConfiguration)(DropletsItemActionsPostResponseable, error) {
+func (m *DropletsItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actions_post_requestable, requestConfiguration *DropletsItemActionsRequestBuilderPostRequestConfiguration)(DropletsItemActionsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -465,7 +465,7 @@ func (m *DropletsItemActionsRequestBuilder) ToGetRequestInformation(ctx context.
 }
 // ToPostRequestInformation to initiate an action on a Droplet send a POST request to`/v2/droplets/$DROPLET_ID/actions`. In the JSON body to the request,set the `type` attribute to one of the supported action types:| Action                                   | Details | Required Permissions || ---------------------------------------- | ----------- | ----------- || <nobr>`enable_backups`</nobr>            | Enables backups for a Droplet | <nobr>`droplet:update`</nobr> || <nobr>`disable_backups`</nobr>           | Disables backups for a Droplet | <nobr>`droplet:update`</nobr> || <nobr>`change_backup_policy`</nobr>      | Update the backup policy for a Droplet | <nobr>`droplet:update`</nobr> || <nobr>`reboot`</nobr>                    | Reboots a Droplet. A `reboot` action is an attempt to reboot the Droplet in a graceful way, similar to using the `reboot` command from the console. | <nobr>`droplet:update`</nobr> || <nobr>`power_cycle`</nobr>               | Power cycles a Droplet. A `powercycle` action is similar to pushing the reset button on a physical machine, it's similar to booting from scratch. | <nobr>`droplet:update`</nobr> || <nobr>`shutdown`</nobr>                  | Shuts down a Droplet. A shutdown action is an attempt to shutdown the Droplet in a graceful way, similar to using the `shutdown` command from the console. Since a `shutdown` command can fail, this action guarantees that the command is issued, not that it succeeds. The preferred way to turn off a Droplet is to attempt a shutdown, with a reasonable timeout, followed by a `power_off` action to ensure the Droplet is off. | <nobr>`droplet:update`</nobr> || <nobr>`power_off`</nobr>                 | Powers off a Droplet. A `power_off` event is a hard shutdown and should only be used if the `shutdown` action is not successful. It is similar to cutting the power on a server and could lead to complications. | <nobr>`droplet:update`</nobr> || <nobr>`power_on`</nobr>                  | Powers on a Droplet. | <nobr>`droplet:update`</nobr> || <nobr>`restore`</nobr>                   | Restore a Droplet using a backup image. The image ID that is passed in must be a backup of the current Droplet instance. The operation will leave any embedded SSH keys intact. | <nobr>`droplet:update`</nobr><br><nobr>`droplet:admin`</nobr> || <nobr>`password_reset`</nobr>            | Resets the root password for a Droplet. A new password will be provided via email. It must be changed after first use. | <nobr>`droplet:update`</nobr><br><nobr>`droplet:admin`</nobr> || <nobr>`resize`</nobr>                    | Resizes a Droplet. Set the `size` attribute to a size slug. If a permanent resize with disk changes included is desired, set the `disk` attribute to `true`. | <nobr>`droplet:update`</nobr><br><nobr>`droplet:create`</nobr> || <nobr>`rebuild`</nobr>                   | Rebuilds a Droplet from a new base image. Set the `image` attribute to an image ID or slug. | <nobr>`droplet:update`</nobr><br><nobr>`droplet:admin`</nobr> || <nobr>`rename`</nobr>                    | Renames a Droplet. | <nobr>`droplet:update`</nobr> || <nobr>`change_kernel`</nobr>             | Changes a Droplet's kernel. Only applies to Droplets with externally managed kernels. All Droplets created after March 2017 use internal kernels by default. | <nobr>`droplet:update`</nobr> || <nobr>`enable_ipv6`</nobr>               | Enables IPv6 for a Droplet. Once enabled for a Droplet, IPv6 can not be disabled. When enabling IPv6 on an existing Droplet, [additional OS-level configuration](https://docs.digitalocean.com/products/networking/ipv6/how-to/enable/#on-existing-droplets) is required. | <nobr>`droplet:update`</nobr> || <nobr>`snapshot`</nobr>                  | Takes a snapshot of a Droplet. | <nobr>`droplet:update`</nobr><br><nobr>`image:create`</nobr> |
 // returns a *RequestInformation when successful
-func (m *DropletsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body DropletsItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *DropletsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DropletsItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Droplet_actions_post_requestable, requestConfiguration *DropletsItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

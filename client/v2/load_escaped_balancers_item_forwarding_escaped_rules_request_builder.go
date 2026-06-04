@@ -46,7 +46,7 @@ func NewLoad_balancersItemForwarding_rulesRequestBuilder(rawUrl string, requestA
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Load_balancersItemForwarding_rulesRequestBuilder) Delete(ctx context.Context, body Load_balancersItemForwarding_rulesDeleteRequestBodyable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderDeleteRequestConfiguration)(error) {
+func (m *Load_balancersItemForwarding_rulesRequestBuilder) Delete(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_remove_forwarding_rules_requestable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderDeleteRequestConfiguration)(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -70,7 +70,7 @@ func (m *Load_balancersItemForwarding_rulesRequestBuilder) Delete(ctx context.Co
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Load_balancersItemForwarding_rulesRequestBuilder) Post(ctx context.Context, body Load_balancersItemForwarding_rulesPostRequestBodyable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderPostRequestConfiguration)(error) {
+func (m *Load_balancersItemForwarding_rulesRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_add_forwarding_rules_requestable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -90,7 +90,7 @@ func (m *Load_balancersItemForwarding_rulesRequestBuilder) Post(ctx context.Cont
 }
 // ToDeleteRequestInformation to remove forwarding rules from a load balancer instance, send a DELETErequest to `/v2/load_balancers/$LOAD_BALANCER_ID/forwarding_rules`. In thebody of the request, there should be a `forwarding_rules` attribute containingan array of rules to be removed.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *Load_balancersItemForwarding_rulesRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body Load_balancersItemForwarding_rulesDeleteRequestBodyable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Load_balancersItemForwarding_rulesRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_remove_forwarding_rules_requestable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)
@@ -105,7 +105,7 @@ func (m *Load_balancersItemForwarding_rulesRequestBuilder) ToDeleteRequestInform
 }
 // ToPostRequestInformation to add an additional forwarding rule to a load balancer instance, send a POSTrequest to `/v2/load_balancers/$LOAD_BALANCER_ID/forwarding_rules`. In the bodyof the request, there should be a `forwarding_rules` attribute containing anarray of rules to be added.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *Load_balancersItemForwarding_rulesRequestBuilder) ToPostRequestInformation(ctx context.Context, body Load_balancersItemForwarding_rulesPostRequestBodyable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Load_balancersItemForwarding_rulesRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_add_forwarding_rules_requestable, requestConfiguration *Load_balancersItemForwarding_rulesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

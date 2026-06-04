@@ -105,7 +105,7 @@ func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) Ge
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) Put(ctx context.Context, body DatabasesItemSchemaRegistryConfigItemWithSubject_namePutRequestBodyable, requestConfiguration *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilderPutRequestConfiguration)(DatabasesItemSchemaRegistryConfigItemWithSubject_nameResponseable, error) {
+func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_update_kafka_schema_subject_config_requestable, requestConfiguration *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilderPutRequestConfiguration)(DatabasesItemSchemaRegistryConfigItemWithSubject_nameResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -133,7 +133,7 @@ func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) Pu
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) PutAsWithSubject_namePutResponse(ctx context.Context, body DatabasesItemSchemaRegistryConfigItemWithSubject_namePutRequestBodyable, requestConfiguration *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilderPutRequestConfiguration)(DatabasesItemSchemaRegistryConfigItemWithSubject_namePutResponseable, error) {
+func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) PutAsWithSubject_namePutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_update_kafka_schema_subject_config_requestable, requestConfiguration *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilderPutRequestConfiguration)(DatabasesItemSchemaRegistryConfigItemWithSubject_namePutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -167,7 +167,7 @@ func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) To
 }
 // ToPutRequestInformation to update the Schema Registry configuration for a Subject of a Kafka cluster, send a PUT request to`/v2/databases/$DATABASE_ID/schema-registry/config/$SUBJECT_NAME`.The response is a JSON object with a `compatibility_level` key, which is set to an objectcontaining any database configuration parameters.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body DatabasesItemSchemaRegistryConfigItemWithSubject_namePutRequestBodyable, requestConfiguration *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_update_kafka_schema_subject_config_requestable, requestConfiguration *DatabasesItemSchemaRegistryConfigWithSubject_nameItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

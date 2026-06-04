@@ -138,7 +138,7 @@ func (m *ProjectsRequestBuilder) GetAsProjectsGetResponse(ctx context.Context, r
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *ProjectsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Project_baseable, requestConfiguration *ProjectsRequestBuilderPostRequestConfiguration)(ProjectsResponseable, error) {
+func (m *ProjectsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_create_requestable, requestConfiguration *ProjectsRequestBuilderPostRequestConfiguration)(ProjectsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -164,7 +164,7 @@ func (m *ProjectsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f9
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *ProjectsRequestBuilder) PostAsProjectsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Project_baseable, requestConfiguration *ProjectsRequestBuilderPostRequestConfiguration)(ProjectsPostResponseable, error) {
+func (m *ProjectsRequestBuilder) PostAsProjectsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_create_requestable, requestConfiguration *ProjectsRequestBuilderPostRequestConfiguration)(ProjectsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -200,7 +200,7 @@ func (m *ProjectsRequestBuilder) ToGetRequestInformation(ctx context.Context, re
 }
 // ToPostRequestInformation to create a project, send a POST request to `/v2/projects`.
 // returns a *RequestInformation when successful
-func (m *ProjectsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Project_baseable, requestConfiguration *ProjectsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *ProjectsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_create_requestable, requestConfiguration *ProjectsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

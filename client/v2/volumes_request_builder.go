@@ -15,23 +15,23 @@ import (
 type VolumesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// VolumesPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable
-type VolumesPostRequestBody struct {
+// Volumes_create_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable
+type Volumes_create_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able
     volumes_ext4 i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable
     volumes_xfs i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable
 }
-// NewVolumesPostRequestBody instantiates a new VolumesPostRequestBody and sets the default values.
-func NewVolumesPostRequestBody()(*VolumesPostRequestBody) {
-    m := &VolumesPostRequestBody{
+// NewVolumes_create_request instantiates a new Volumes_create_request and sets the default values.
+func NewVolumes_create_request()(*Volumes_create_request) {
+    m := &Volumes_create_request{
     }
     return m
 }
-// CreateVolumesPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateVolumes_create_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func CreateVolumesPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := NewVolumesPostRequestBody()
+func CreateVolumes_create_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewVolumes_create_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateVolumes_ext4FromDiscriminatorValue); val != nil {
             if err != nil {
@@ -53,26 +53,26 @@ func CreateVolumesPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e8
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *VolumesPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Volumes_create_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *VolumesPostRequestBody) GetIsComposedType()(bool) {
+func (m *Volumes_create_request) GetIsComposedType()(bool) {
     return true
 }
 // GetVolumesExt4 gets the volumes_ext4 property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able
 // returns a Volumes_ext4able when successful
-func (m *VolumesPostRequestBody) GetVolumesExt4()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able) {
+func (m *Volumes_create_request) GetVolumesExt4()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able) {
     return m.volumes_ext4
 }
 // GetVolumesXfs gets the volumes_xfs property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable
 // returns a Volumes_xfsable when successful
-func (m *VolumesPostRequestBody) GetVolumesXfs()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable) {
+func (m *Volumes_create_request) GetVolumesXfs()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable) {
     return m.volumes_xfs
 }
 // Serialize serializes information the current object
-func (m *VolumesPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Volumes_create_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetVolumesExt4() != nil {
         err := writer.WriteObjectValue("", m.GetVolumesExt4())
         if err != nil {
@@ -87,11 +87,11 @@ func (m *VolumesPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487
     return nil
 }
 // SetVolumesExt4 sets the volumes_ext4 property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able
-func (m *VolumesPostRequestBody) SetVolumesExt4(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able)() {
+func (m *Volumes_create_request) SetVolumesExt4(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able)() {
     m.volumes_ext4 = value
 }
 // SetVolumesXfs sets the volumes_xfs property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable
-func (m *VolumesPostRequestBody) SetVolumesXfs(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable)() {
+func (m *Volumes_create_request) SetVolumesXfs(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable)() {
     m.volumes_xfs = value
 }
 // VolumesRequestBuilderDeleteQueryParameters block storage volumes may also be deleted by name by sending a DELETE request with the volume's **name** and the **region slug** for the region it is located in as query parameters to `/v2/volumes?name=$VOLUME_NAME&region=nyc1`.No response body will be sent back, but the response code will indicate success. Specifically, the response code will be a 204, which means that the action was successful with no returned body data.
@@ -143,7 +143,7 @@ type VolumesRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-type VolumesPostRequestBodyable interface {
+type Volumes_create_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetVolumesExt4()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_ext4able)
     GetVolumesXfs()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_xfsable)
@@ -277,7 +277,7 @@ func (m *VolumesRequestBuilder) GetAsVolumesGetResponse(ctx context.Context, req
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VolumesRequestBuilder) Post(ctx context.Context, body VolumesPostRequestBodyable, requestConfiguration *VolumesRequestBuilderPostRequestConfiguration)(VolumesResponseable, error) {
+func (m *VolumesRequestBuilder) Post(ctx context.Context, body Volumes_create_requestable, requestConfiguration *VolumesRequestBuilderPostRequestConfiguration)(VolumesResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -307,7 +307,7 @@ func (m *VolumesRequestBuilder) Post(ctx context.Context, body VolumesPostReques
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VolumesRequestBuilder) PostAsVolumesPostResponse(ctx context.Context, body VolumesPostRequestBodyable, requestConfiguration *VolumesRequestBuilderPostRequestConfiguration)(VolumesPostResponseable, error) {
+func (m *VolumesRequestBuilder) PostAsVolumesPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_create_requestable, requestConfiguration *VolumesRequestBuilderPostRequestConfiguration)(VolumesPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -364,7 +364,7 @@ func (m *VolumesRequestBuilder) ToGetRequestInformation(ctx context.Context, req
 }
 // ToPostRequestInformation to create a new volume, send a POST request to `/v2/volumes`. Optionally, a `filesystem_type` attribute may be provided in order to automatically format the volume's filesystem. Pre-formatted volumes are automatically mounted when attached to Ubuntu, Debian, Fedora, Fedora Atomic, and CentOS Droplets created on or after April 26, 2018. Attaching pre-formatted volumes to Droplets without support for auto-mounting is not recommended.
 // returns a *RequestInformation when successful
-func (m *VolumesRequestBuilder) ToPostRequestInformation(ctx context.Context, body VolumesPostRequestBodyable, requestConfiguration *VolumesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VolumesRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volumes_create_requestable, requestConfiguration *VolumesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

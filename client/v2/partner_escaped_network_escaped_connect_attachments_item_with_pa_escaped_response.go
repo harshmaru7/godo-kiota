@@ -7,14 +7,14 @@ import (
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91 "github.com/microsoft/kiota-abstractions-go/serialization"
 )
 
-// Deprecated: This class is obsolete. Use Partner_network_connectAttachmentsItemWithPa_GetResponseable instead.
+// Deprecated: This class is obsolete. Use Partner_network_connectAttachmentsItemWithPa_DeleteResponseable instead.
 type Partner_network_connectAttachmentsItemWithPa_Response struct {
-    Partner_network_connectAttachmentsItemWithPa_GetResponse
+    Partner_network_connectAttachmentsItemWithPa_DeleteResponse
 }
 // NewPartner_network_connectAttachmentsItemWithPa_Response instantiates a new Partner_network_connectAttachmentsItemWithPa_Response and sets the default values.
 func NewPartner_network_connectAttachmentsItemWithPa_Response()(*Partner_network_connectAttachmentsItemWithPa_Response) {
     m := &Partner_network_connectAttachmentsItemWithPa_Response{
-        Partner_network_connectAttachmentsItemWithPa_GetResponse: *NewPartner_network_connectAttachmentsItemWithPa_GetResponse(),
+        Partner_network_connectAttachmentsItemWithPa_DeleteResponse: *NewPartner_network_connectAttachmentsItemWithPa_DeleteResponse(),
     }
     return m
 }
@@ -23,8 +23,8 @@ func NewPartner_network_connectAttachmentsItemWithPa_Response()(*Partner_network
 func CreatePartner_network_connectAttachmentsItemWithPa_ResponseFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewPartner_network_connectAttachmentsItemWithPa_Response(), nil
 }
-// Deprecated: This class is obsolete. Use Partner_network_connectAttachmentsItemWithPa_GetResponseable instead.
+// Deprecated: This class is obsolete. Use Partner_network_connectAttachmentsItemWithPa_DeleteResponseable instead.
 type Partner_network_connectAttachmentsItemWithPa_Responseable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    Partner_network_connectAttachmentsItemWithPa_GetResponseable
+    Partner_network_connectAttachmentsItemWithPa_DeleteResponseable
 }

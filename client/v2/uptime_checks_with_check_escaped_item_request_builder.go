@@ -141,7 +141,7 @@ func (m *UptimeChecksWithCheck_ItemRequestBuilder) GetAsWithCheck_GetResponse(ct
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *UptimeChecksWithCheck_ItemRequestBuilder) Put(ctx context.Context, body UptimeChecksItemWithCheck_PutRequestBodyable, requestConfiguration *UptimeChecksWithCheck_ItemRequestBuilderPutRequestConfiguration)(UptimeChecksItemWithCheck_Responseable, error) {
+func (m *UptimeChecksWithCheck_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_update_check_requestable, requestConfiguration *UptimeChecksWithCheck_ItemRequestBuilderPutRequestConfiguration)(UptimeChecksItemWithCheck_Responseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -169,7 +169,7 @@ func (m *UptimeChecksWithCheck_ItemRequestBuilder) Put(ctx context.Context, body
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *UptimeChecksWithCheck_ItemRequestBuilder) PutAsWithCheck_PutResponse(ctx context.Context, body UptimeChecksItemWithCheck_PutRequestBodyable, requestConfiguration *UptimeChecksWithCheck_ItemRequestBuilderPutRequestConfiguration)(UptimeChecksItemWithCheck_PutResponseable, error) {
+func (m *UptimeChecksWithCheck_ItemRequestBuilder) PutAsWithCheck_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_update_check_requestable, requestConfiguration *UptimeChecksWithCheck_ItemRequestBuilderPutRequestConfiguration)(UptimeChecksItemWithCheck_PutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -219,7 +219,7 @@ func (m *UptimeChecksWithCheck_ItemRequestBuilder) ToGetRequestInformation(ctx c
 }
 // ToPutRequestInformation to update the settings of an Uptime check, send a PUT request to `/v2/uptime/checks/$CHECK_ID`.
 // returns a *RequestInformation when successful
-func (m *UptimeChecksWithCheck_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body UptimeChecksItemWithCheck_PutRequestBodyable, requestConfiguration *UptimeChecksWithCheck_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *UptimeChecksWithCheck_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_update_check_requestable, requestConfiguration *UptimeChecksWithCheck_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

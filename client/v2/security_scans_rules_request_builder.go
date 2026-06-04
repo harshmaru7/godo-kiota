@@ -40,7 +40,7 @@ func NewSecurityScansRulesRequestBuilder(rawUrl string, requestAdapter i2ae4187f
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *SecurityScansRulesRequestBuilder) Post(ctx context.Context, body SecurityScansRulesPostRequestBodyable, requestConfiguration *SecurityScansRulesRequestBuilderPostRequestConfiguration)(error) {
+func (m *SecurityScansRulesRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_create_scan_rule_requestable, requestConfiguration *SecurityScansRulesRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -61,7 +61,7 @@ func (m *SecurityScansRulesRequestBuilder) Post(ctx context.Context, body Securi
 }
 // ToPostRequestInformation to mark a scan finding as a false positive, send a POST request to`/v2/security/scans/rules` to create a new scan rule.
 // returns a *RequestInformation when successful
-func (m *SecurityScansRulesRequestBuilder) ToPostRequestInformation(ctx context.Context, body SecurityScansRulesPostRequestBodyable, requestConfiguration *SecurityScansRulesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *SecurityScansRulesRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_create_scan_rule_requestable, requestConfiguration *SecurityScansRulesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

@@ -136,7 +136,7 @@ func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) GetAsWithSsh_key_i
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) Put(ctx context.Context, body AccountKeysItemWithSsh_key_identifierPutRequestBodyable, requestConfiguration *AccountKeysWithSsh_key_identifierItemRequestBuilderPutRequestConfiguration)(AccountKeysItemWithSsh_key_identifierResponseable, error) {
+func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Ssh_keys_update_requestable, requestConfiguration *AccountKeysWithSsh_key_identifierItemRequestBuilderPutRequestConfiguration)(AccountKeysItemWithSsh_key_identifierResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -164,7 +164,7 @@ func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) Put(ctx context.Co
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) PutAsWithSsh_key_identifierPutResponse(ctx context.Context, body AccountKeysItemWithSsh_key_identifierPutRequestBodyable, requestConfiguration *AccountKeysWithSsh_key_identifierItemRequestBuilderPutRequestConfiguration)(AccountKeysItemWithSsh_key_identifierPutResponseable, error) {
+func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) PutAsWithSsh_key_identifierPutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Ssh_keys_update_requestable, requestConfiguration *AccountKeysWithSsh_key_identifierItemRequestBuilderPutRequestConfiguration)(AccountKeysItemWithSsh_key_identifierPutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -209,7 +209,7 @@ func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) ToGetRequestInform
 }
 // ToPutRequestInformation to update the name of an SSH key, send a PUT request to either `/v2/account/keys/$SSH_KEY_ID` or `/v2/account/keys/$SSH_KEY_FINGERPRINT`. Set the `name` attribute to the new name you want to use.
 // returns a *RequestInformation when successful
-func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body AccountKeysItemWithSsh_key_identifierPutRequestBodyable, requestConfiguration *AccountKeysWithSsh_key_identifierItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *AccountKeysWithSsh_key_identifierItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Ssh_keys_update_requestable, requestConfiguration *AccountKeysWithSsh_key_identifierItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

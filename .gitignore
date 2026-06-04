@@ -7,6 +7,9 @@
 # Kiota's per-run log (timestamps create noise in every regen PR)
 **/.kiota.log
 
+# Compiled pipeline helpers
+/.tools/
+
 # Go
 *.test
 *.out

@@ -202,7 +202,7 @@ func (m *ProjectsWithProject_ItemRequestBuilder) PatchAsWithProject_PatchRespons
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *ProjectsWithProject_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projectable, requestConfiguration *ProjectsWithProject_ItemRequestBuilderPutRequestConfiguration)(ProjectsItemWithProject_Responseable, error) {
+func (m *ProjectsWithProject_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_update_requestable, requestConfiguration *ProjectsWithProject_ItemRequestBuilderPutRequestConfiguration)(ProjectsItemWithProject_Responseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -230,7 +230,7 @@ func (m *ProjectsWithProject_ItemRequestBuilder) Put(ctx context.Context, body i
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *ProjectsWithProject_ItemRequestBuilder) PutAsWithProject_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projectable, requestConfiguration *ProjectsWithProject_ItemRequestBuilderPutRequestConfiguration)(ProjectsItemWithProject_PutResponseable, error) {
+func (m *ProjectsWithProject_ItemRequestBuilder) PutAsWithProject_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_update_requestable, requestConfiguration *ProjectsWithProject_ItemRequestBuilderPutRequestConfiguration)(ProjectsItemWithProject_PutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -295,7 +295,7 @@ func (m *ProjectsWithProject_ItemRequestBuilder) ToPatchRequestInformation(ctx c
 }
 // ToPutRequestInformation to update a project, send a PUT request to `/v2/projects/$PROJECT_ID`. All of the following attributes must be sent.
 // returns a *RequestInformation when successful
-func (m *ProjectsWithProject_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projectable, requestConfiguration *ProjectsWithProject_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *ProjectsWithProject_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Projects_update_requestable, requestConfiguration *ProjectsWithProject_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

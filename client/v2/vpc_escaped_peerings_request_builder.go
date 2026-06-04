@@ -142,7 +142,7 @@ func (m *Vpc_peeringsRequestBuilder) GetAsVpc_peeringsGetResponse(ctx context.Co
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Vpc_peeringsRequestBuilder) Post(ctx context.Context, body Vpc_peeringsPostRequestBodyable, requestConfiguration *Vpc_peeringsRequestBuilderPostRequestConfiguration)(Vpc_peeringsResponseable, error) {
+func (m *Vpc_peeringsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpc_peerings_create_requestable, requestConfiguration *Vpc_peeringsRequestBuilderPostRequestConfiguration)(Vpc_peeringsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -168,7 +168,7 @@ func (m *Vpc_peeringsRequestBuilder) Post(ctx context.Context, body Vpc_peerings
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Vpc_peeringsRequestBuilder) PostAsVpc_peeringsPostResponse(ctx context.Context, body Vpc_peeringsPostRequestBodyable, requestConfiguration *Vpc_peeringsRequestBuilderPostRequestConfiguration)(Vpc_peeringsPostResponseable, error) {
+func (m *Vpc_peeringsRequestBuilder) PostAsVpc_peeringsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpc_peerings_create_requestable, requestConfiguration *Vpc_peeringsRequestBuilderPostRequestConfiguration)(Vpc_peeringsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -204,7 +204,7 @@ func (m *Vpc_peeringsRequestBuilder) ToGetRequestInformation(ctx context.Context
 }
 // ToPostRequestInformation to create a new VPC Peering, send a POST request to `/v2/vpc_peerings` specifying a name and a list of two VPC IDs to peer. The response code, 202 Accepted, does not indicate the success or failure of the operation, just that the request has been accepted for processing.
 // returns a *RequestInformation when successful
-func (m *Vpc_peeringsRequestBuilder) ToPostRequestInformation(ctx context.Context, body Vpc_peeringsPostRequestBodyable, requestConfiguration *Vpc_peeringsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Vpc_peeringsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Vpc_peerings_create_requestable, requestConfiguration *Vpc_peeringsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

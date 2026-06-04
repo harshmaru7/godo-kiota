@@ -117,7 +117,7 @@ func (m *DatabasesItemReplicasRequestBuilder) GetAsReplicasGetResponse(ctx conte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemReplicasRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Database_replicaable, requestConfiguration *DatabasesItemReplicasRequestBuilderPostRequestConfiguration)(DatabasesItemReplicasResponseable, error) {
+func (m *DatabasesItemReplicasRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_replica_requestable, requestConfiguration *DatabasesItemReplicasRequestBuilderPostRequestConfiguration)(DatabasesItemReplicasResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -145,7 +145,7 @@ func (m *DatabasesItemReplicasRequestBuilder) Post(ctx context.Context, body i3e
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemReplicasRequestBuilder) PostAsReplicasPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Database_replicaable, requestConfiguration *DatabasesItemReplicasRequestBuilderPostRequestConfiguration)(DatabasesItemReplicasPostResponseable, error) {
+func (m *DatabasesItemReplicasRequestBuilder) PostAsReplicasPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_replica_requestable, requestConfiguration *DatabasesItemReplicasRequestBuilderPostRequestConfiguration)(DatabasesItemReplicasPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -179,7 +179,7 @@ func (m *DatabasesItemReplicasRequestBuilder) ToGetRequestInformation(ctx contex
 }
 // ToPostRequestInformation to create a read-only replica for a PostgreSQL or MySQL database cluster, send a POST request to `/v2/databases/$DATABASE_ID/replicas` specifying the name it should be given, the size of the node to be used, and the region where it will be located.**Note**: Read-only replicas are not supported for Caching or Valkey clusters.The response will be a JSON object with a key called `replica`. The value of this will be an object that contains the standard attributes associated with a database replica. The initial value of the read-only replica's `status` attribute will be `forking`. When the replica is ready to receive traffic, this will transition to `active`.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemReplicasRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Database_replicaable, requestConfiguration *DatabasesItemReplicasRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemReplicasRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_replica_requestable, requestConfiguration *DatabasesItemReplicasRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

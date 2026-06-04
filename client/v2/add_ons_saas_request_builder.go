@@ -6,6 +6,7 @@ package v2
 import (
     "context"
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f "github.com/microsoft/kiota-abstractions-go"
+    i561e97a8befe7661a44c8f54600992b4207a3a0cf6770e5559949bc276de2e22 "github.com/google/uuid"
     i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76 "github.com/harshmaru7/godo-kiota/client/models"
 )
 
@@ -28,6 +29,7 @@ type AddOnsSaasRequestBuilderPostRequestConfiguration struct {
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
 // ByResource_uuid gets an item from the github.com/harshmaru7/godo-kiota/client.v2.addOns.saas.item collection
+// Deprecated: This indexer is deprecated and will be removed in the next major version. Use the one with the typed parameter instead.
 // returns a *AddOnsSaasWithResource_uuItemRequestBuilder when successful
 func (m *AddOnsSaasRequestBuilder) ByResource_uuid(resource_uuid string)(*AddOnsSaasWithResource_uuItemRequestBuilder) {
     urlTplParams := make(map[string]string)
@@ -37,6 +39,16 @@ func (m *AddOnsSaasRequestBuilder) ByResource_uuid(resource_uuid string)(*AddOns
     if resource_uuid != "" {
         urlTplParams["resource_uuid"] = resource_uuid
     }
+    return NewAddOnsSaasWithResource_uuItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
+}
+// ByResource_uuidGuid gets an item from the github.com/harshmaru7/godo-kiota/client.v2.addOns.saas.item collection
+// returns a *AddOnsSaasWithResource_uuItemRequestBuilder when successful
+func (m *AddOnsSaasRequestBuilder) ByResource_uuidGuid(resource_uuid i561e97a8befe7661a44c8f54600992b4207a3a0cf6770e5559949bc276de2e22.UUID)(*AddOnsSaasWithResource_uuItemRequestBuilder) {
+    urlTplParams := make(map[string]string)
+    for idx, item := range m.BaseRequestBuilder.PathParameters {
+        urlTplParams[idx] = item
+    }
+    urlTplParams["resource_uuid"] = resource_uuid.String()
     return NewAddOnsSaasWithResource_uuItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
 }
 // NewAddOnsSaasRequestBuilderInternal instantiates a new AddOnsSaasRequestBuilder and sets the default values.
@@ -112,7 +124,7 @@ func (m *AddOnsSaasRequestBuilder) GetAsSaasGetResponse(ctx context.Context, req
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *AddOnsSaasRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_resource_newable, requestConfiguration *AddOnsSaasRequestBuilderPostRequestConfiguration)(AddOnsSaasResponseable, error) {
+func (m *AddOnsSaasRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_create_requestable, requestConfiguration *AddOnsSaasRequestBuilderPostRequestConfiguration)(AddOnsSaasResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -138,7 +150,7 @@ func (m *AddOnsSaasRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *AddOnsSaasRequestBuilder) PostAsSaasPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_resource_newable, requestConfiguration *AddOnsSaasRequestBuilderPostRequestConfiguration)(AddOnsSaasPostResponseable, error) {
+func (m *AddOnsSaasRequestBuilder) PostAsSaasPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_create_requestable, requestConfiguration *AddOnsSaasRequestBuilderPostRequestConfiguration)(AddOnsSaasPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -171,7 +183,7 @@ func (m *AddOnsSaasRequestBuilder) ToGetRequestInformation(ctx context.Context, 
 }
 // ToPostRequestInformation to create an add-on resource, send a POST request to `/v2/add-ons/saas` with required parameters.Some add-ons require additional metadata to be provided in the request body. To find outwhat metadata is required for a specific add-on, send a GET request to `/v2/add-ons/apps/{app_slug}/metadata`.
 // returns a *RequestInformation when successful
-func (m *AddOnsSaasRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_resource_newable, requestConfiguration *AddOnsSaasRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *AddOnsSaasRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_create_requestable, requestConfiguration *AddOnsSaasRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

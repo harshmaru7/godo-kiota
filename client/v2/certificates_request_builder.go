@@ -15,23 +15,23 @@ import (
 type CertificatesRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// CertificatesPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable
-type CertificatesPostRequestBody struct {
+// Certificates_create_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable
+type Certificates_create_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable
     certificate_request_custom i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable
     certificate_request_lets_encrypt i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable
 }
-// NewCertificatesPostRequestBody instantiates a new CertificatesPostRequestBody and sets the default values.
-func NewCertificatesPostRequestBody()(*CertificatesPostRequestBody) {
-    m := &CertificatesPostRequestBody{
+// NewCertificates_create_request instantiates a new Certificates_create_request and sets the default values.
+func NewCertificates_create_request()(*Certificates_create_request) {
+    m := &Certificates_create_request{
     }
     return m
 }
-// CreateCertificatesPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateCertificates_create_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func CreateCertificatesPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := NewCertificatesPostRequestBody()
+func CreateCertificates_create_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewCertificates_create_request()
     if parseNode != nil {
         mappingValueNode, err := parseNode.GetChildNode("")
         if err != nil {
@@ -50,17 +50,17 @@ func CreateCertificatesPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2
 }
 // GetCertificateRequestCustom gets the certificate_request_custom property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable
 // returns a Certificate_request_customable when successful
-func (m *CertificatesPostRequestBody) GetCertificateRequestCustom()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable) {
+func (m *Certificates_create_request) GetCertificateRequestCustom()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable) {
     return m.certificate_request_custom
 }
 // GetCertificateRequestLetsEncrypt gets the certificate_request_lets_encrypt property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable
 // returns a Certificate_request_lets_encryptable when successful
-func (m *CertificatesPostRequestBody) GetCertificateRequestLetsEncrypt()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable) {
+func (m *Certificates_create_request) GetCertificateRequestLetsEncrypt()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable) {
     return m.certificate_request_lets_encrypt
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *CertificatesPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Certificates_create_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     if m.GetCertificateRequestCustom() != nil {
         return m.GetCertificateRequestCustom().GetFieldDeserializers()
     } else if m.GetCertificateRequestLetsEncrypt() != nil {
@@ -70,11 +70,11 @@ func (m *CertificatesPostRequestBody) GetFieldDeserializers()(map[string]func(i8
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *CertificatesPostRequestBody) GetIsComposedType()(bool) {
+func (m *Certificates_create_request) GetIsComposedType()(bool) {
     return true
 }
 // Serialize serializes information the current object
-func (m *CertificatesPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Certificates_create_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetCertificateRequestCustom() != nil {
         err := writer.WriteObjectValue("", m.GetCertificateRequestCustom())
         if err != nil {
@@ -89,11 +89,11 @@ func (m *CertificatesPostRequestBody) Serialize(writer i878a80d2330e89d26896388a
     return nil
 }
 // SetCertificateRequestCustom sets the certificate_request_custom property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable
-func (m *CertificatesPostRequestBody) SetCertificateRequestCustom(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable)() {
+func (m *Certificates_create_request) SetCertificateRequestCustom(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable)() {
     m.certificate_request_custom = value
 }
 // SetCertificateRequestLetsEncrypt sets the certificate_request_lets_encrypt property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable
-func (m *CertificatesPostRequestBody) SetCertificateRequestLetsEncrypt(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable)() {
+func (m *Certificates_create_request) SetCertificateRequestLetsEncrypt(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable)() {
     m.certificate_request_lets_encrypt = value
 }
 // CertificatesRequestBuilderGetQueryParameters to list all of the certificates available on your account, send a GET request to `/v2/certificates`.Each entry includes the certificate's name, type (custom or Let's Encrypt), SHA-1 fingerprint, and expiration. Results are paginated — use `per_page` and `page`.
@@ -121,7 +121,7 @@ type CertificatesRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-type CertificatesPostRequestBodyable interface {
+type Certificates_create_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetCertificateRequestCustom()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_customable)
     GetCertificateRequestLetsEncrypt()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificate_request_lets_encryptable)
@@ -224,7 +224,7 @@ func (m *CertificatesRequestBuilder) GetAsCertificatesGetResponse(ctx context.Co
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *CertificatesRequestBuilder) Post(ctx context.Context, body CertificatesPostRequestBodyable, requestConfiguration *CertificatesRequestBuilderPostRequestConfiguration)(CertificatesResponseable, error) {
+func (m *CertificatesRequestBuilder) Post(ctx context.Context, body Certificates_create_requestable, requestConfiguration *CertificatesRequestBuilderPostRequestConfiguration)(CertificatesResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -250,7 +250,7 @@ func (m *CertificatesRequestBuilder) Post(ctx context.Context, body Certificates
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *CertificatesRequestBuilder) PostAsCertificatesPostResponse(ctx context.Context, body CertificatesPostRequestBodyable, requestConfiguration *CertificatesRequestBuilderPostRequestConfiguration)(CertificatesPostResponseable, error) {
+func (m *CertificatesRequestBuilder) PostAsCertificatesPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificates_create_requestable, requestConfiguration *CertificatesRequestBuilderPostRequestConfiguration)(CertificatesPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -286,7 +286,7 @@ func (m *CertificatesRequestBuilder) ToGetRequestInformation(ctx context.Context
 }
 // ToPostRequestInformation to upload new SSL certificate which you have previously generated, send a POSTrequest to `/v2/certificates`.When uploading a user-generated certificate, the `private_key`,`leaf_certificate`, and optionally the `certificate_chain` attributes shouldbe provided. The type must be set to `custom`.When using Let's Encrypt to create a certificate, the `dns_names` attributemust be provided, and the type must be set to `lets_encrypt`.
 // returns a *RequestInformation when successful
-func (m *CertificatesRequestBuilder) ToPostRequestInformation(ctx context.Context, body CertificatesPostRequestBodyable, requestConfiguration *CertificatesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *CertificatesRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Certificates_create_requestable, requestConfiguration *CertificatesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

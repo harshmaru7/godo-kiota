@@ -136,7 +136,7 @@ func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) GetAsWithUsernameGetR
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) Put(ctx context.Context, body DatabasesItemUsersItemWithUsernamePutRequestBodyable, requestConfiguration *DatabasesItemUsersWithUsernameItemRequestBuilderPutRequestConfiguration)(DatabasesItemUsersItemWithUsernameResponseable, error) {
+func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) Put(ctx context.Context, body DatabasesItemUsersItemDatabases_update_user_requestPutRequestBodyable, requestConfiguration *DatabasesItemUsersWithUsernameItemRequestBuilderPutRequestConfiguration)(DatabasesItemUsersItemWithUsernameResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -164,7 +164,7 @@ func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) Put(ctx context.Conte
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) PutAsWithUsernamePutResponse(ctx context.Context, body DatabasesItemUsersItemWithUsernamePutRequestBodyable, requestConfiguration *DatabasesItemUsersWithUsernameItemRequestBuilderPutRequestConfiguration)(DatabasesItemUsersItemWithUsernamePutResponseable, error) {
+func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) PutAsWithUsernamePutResponse(ctx context.Context, body DatabasesItemUsersItemDatabases_update_user_requestPutRequestBodyable, requestConfiguration *DatabasesItemUsersWithUsernameItemRequestBuilderPutRequestConfiguration)(DatabasesItemUsersItemWithUsernamePutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -214,7 +214,7 @@ func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) ToGetRequestInformati
 }
 // ToPutRequestInformation to update an existing database user, send a PUT request to `/v2/databases/$DATABASE_ID/users/$USERNAME`with the desired settings.**Note**: only `settings` can be updated via this type of request. If you wish to change the name of a user,you must recreate a new user.The response will be a JSON object with a key called `user`. The value of this will be anobject that contains the name of the update database user, along with the `settings` object thathas been updated.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body DatabasesItemUsersItemWithUsernamePutRequestBodyable, requestConfiguration *DatabasesItemUsersWithUsernameItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemUsersWithUsernameItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body DatabasesItemUsersItemDatabases_update_user_requestPutRequestBodyable, requestConfiguration *DatabasesItemUsersWithUsernameItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

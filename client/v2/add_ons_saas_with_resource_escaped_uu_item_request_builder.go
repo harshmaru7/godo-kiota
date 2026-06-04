@@ -140,7 +140,7 @@ func (m *AddOnsSaasWithResource_uuItemRequestBuilder) GetAsWithResource_uuGetRes
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *AddOnsSaasWithResource_uuItemRequestBuilder) Patch(ctx context.Context, body AddOnsSaasItemWithResource_uuPatchRequestBodyable, requestConfiguration *AddOnsSaasWithResource_uuItemRequestBuilderPatchRequestConfiguration)(AddOnsSaasItemWithResource_uuResponseable, error) {
+func (m *AddOnsSaasWithResource_uuItemRequestBuilder) Patch(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_patch_requestable, requestConfiguration *AddOnsSaasWithResource_uuItemRequestBuilderPatchRequestConfiguration)(AddOnsSaasItemWithResource_uuResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -168,7 +168,7 @@ func (m *AddOnsSaasWithResource_uuItemRequestBuilder) Patch(ctx context.Context,
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *AddOnsSaasWithResource_uuItemRequestBuilder) PatchAsWithResource_uuPatchResponse(ctx context.Context, body AddOnsSaasItemWithResource_uuPatchRequestBodyable, requestConfiguration *AddOnsSaasWithResource_uuItemRequestBuilderPatchRequestConfiguration)(AddOnsSaasItemWithResource_uuPatchResponseable, error) {
+func (m *AddOnsSaasWithResource_uuItemRequestBuilder) PatchAsWithResource_uuPatchResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_patch_requestable, requestConfiguration *AddOnsSaasWithResource_uuItemRequestBuilderPatchRequestConfiguration)(AddOnsSaasItemWithResource_uuPatchResponseable, error) {
     requestInfo, err := m.ToPatchRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -218,7 +218,7 @@ func (m *AddOnsSaasWithResource_uuItemRequestBuilder) ToGetRequestInformation(ct
 }
 // ToPatchRequestInformation to change the name of an Add-On Resource, send a PATCH request to `/v2/add-ons/saas/{resource_uuid}`.Replace `{resource_uuid}` with the UUID of the resource for which you want to change the name.
 // returns a *RequestInformation when successful
-func (m *AddOnsSaasWithResource_uuItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body AddOnsSaasItemWithResource_uuPatchRequestBodyable, requestConfiguration *AddOnsSaasWithResource_uuItemRequestBuilderPatchRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *AddOnsSaasWithResource_uuItemRequestBuilder) ToPatchRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Addons_patch_requestable, requestConfiguration *AddOnsSaasWithResource_uuItemRequestBuilderPatchRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PATCH, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

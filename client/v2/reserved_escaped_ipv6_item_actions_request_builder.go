@@ -14,23 +14,23 @@ import (
 type Reserved_ipv6ItemActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable
-type ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody struct {
+// Reserved_ipv6_actions_post_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable
+type Reserved_ipv6_actions_post_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable
     reserved_ipv6_action_assign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable
     reserved_ipv6_action_unassign i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable
 }
-// ReservedEscapedIpv6ItemActionsRequestBuilder__NewActionsPostRequestBody instantiates a new ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func ReservedEscapedIpv6ItemActionsRequestBuilder__NewActionsPostRequestBody()(*ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody{
+// NewReserved_ipv6_actions_post_request instantiates a new Reserved_ipv6_actions_post_request and sets the default values.
+func NewReserved_ipv6_actions_post_request()(*Reserved_ipv6_actions_post_request) {
+    m := &Reserved_ipv6_actions_post_request{
     }
     return m
 }
-// ReservedEscapedIpv6ItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateReserved_ipv6_actions_post_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func ReservedEscapedIpv6ItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := ReservedEscapedIpv6ItemActionsRequestBuilder__NewActionsPostRequestBody()
+func CreateReserved_ipv6_actions_post_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewReserved_ipv6_actions_post_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateReserved_ipv6_action_assignFromDiscriminatorValue); val != nil {
             if err != nil {
@@ -52,26 +52,26 @@ func ReservedEscapedIpv6ItemActionsRequestBuilder__CreateActionsPostRequestBodyF
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Reserved_ipv6_actions_post_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Reserved_ipv6_actions_post_request) GetIsComposedType()(bool) {
     return true
 }
 // GetReservedIpv6ActionAssign gets the reserved_ipv6_action_assign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable
 // returns a Reserved_ipv6_action_assignable when successful
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) GetReservedIpv6ActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable) {
+func (m *Reserved_ipv6_actions_post_request) GetReservedIpv6ActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable) {
     return m.reserved_ipv6_action_assign
 }
 // GetReservedIpv6ActionUnassign gets the reserved_ipv6_action_unassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable
 // returns a Reserved_ipv6_action_unassignable when successful
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) GetReservedIpv6ActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable) {
+func (m *Reserved_ipv6_actions_post_request) GetReservedIpv6ActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable) {
     return m.reserved_ipv6_action_unassign
 }
 // Serialize serializes information the current object
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Reserved_ipv6_actions_post_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetReservedIpv6ActionAssign() != nil {
         err := writer.WriteObjectValue("", m.GetReservedIpv6ActionAssign())
         if err != nil {
@@ -86,11 +86,11 @@ func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) S
     return nil
 }
 // SetReservedIpv6ActionAssign sets the reserved_ipv6_action_assign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) SetReservedIpv6ActionAssign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable)() {
+func (m *Reserved_ipv6_actions_post_request) SetReservedIpv6ActionAssign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable)() {
     m.reserved_ipv6_action_assign = value
 }
 // SetReservedIpv6ActionUnassign sets the reserved_ipv6_action_unassign property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable
-func (m *ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBody) SetReservedIpv6ActionUnassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable)() {
+func (m *Reserved_ipv6_actions_post_request) SetReservedIpv6ActionUnassign(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable)() {
     m.reserved_ipv6_action_unassign = value
 }
 // Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration configuration for the request such as headers, query parameters, and middleware options.
@@ -100,7 +100,7 @@ type Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration struct {
     // Request options
     Options []i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestOption
 }
-type ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBodyable interface {
+type Reserved_ipv6_actions_post_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetReservedIpv6ActionAssign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_assignable)
     GetReservedIpv6ActionUnassign()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_action_unassignable)
@@ -128,7 +128,7 @@ func NewReserved_ipv6ItemActionsRequestBuilder(rawUrl string, requestAdapter i2a
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Reserved_ipv6ItemActionsRequestBuilder) Post(ctx context.Context, body ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipv6ItemActionsResponseable, error) {
+func (m *Reserved_ipv6ItemActionsRequestBuilder) Post(ctx context.Context, body Reserved_ipv6_actions_post_requestable, requestConfiguration *Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipv6ItemActionsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -156,7 +156,7 @@ func (m *Reserved_ipv6ItemActionsRequestBuilder) Post(ctx context.Context, body 
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Reserved_ipv6ItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipv6ItemActionsPostResponseable, error) {
+func (m *Reserved_ipv6ItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_actions_post_requestable, requestConfiguration *Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration)(Reserved_ipv6ItemActionsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -179,7 +179,7 @@ func (m *Reserved_ipv6ItemActionsRequestBuilder) PostAsActionsPostResponse(ctx c
 }
 // ToPostRequestInformation to initiate an action on a reserved IPv6 send a POST request to`/v2/reserved_ipv6/$RESERVED_IPV6/actions`. In the JSON body to the request,set the `type` attribute to on of the supported action types:| Action     | Details|------------|--------| `assign`   | Assigns a reserved IPv6 to a Droplet| `unassign` | Unassign a reserved IPv6 from a Droplet
 // returns a *RequestInformation when successful
-func (m *Reserved_ipv6ItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body ReservedEscapedIpv6ItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Reserved_ipv6ItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Reserved_ipv6_actions_post_requestable, requestConfiguration *Reserved_ipv6ItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

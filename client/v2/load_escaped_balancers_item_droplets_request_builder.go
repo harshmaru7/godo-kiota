@@ -46,7 +46,7 @@ func NewLoad_balancersItemDropletsRequestBuilder(rawUrl string, requestAdapter i
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Load_balancersItemDropletsRequestBuilder) Delete(ctx context.Context, body Load_balancersItemDropletsDeleteRequestBodyable, requestConfiguration *Load_balancersItemDropletsRequestBuilderDeleteRequestConfiguration)(error) {
+func (m *Load_balancersItemDropletsRequestBuilder) Delete(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_remove_droplets_requestable, requestConfiguration *Load_balancersItemDropletsRequestBuilderDeleteRequestConfiguration)(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -70,7 +70,7 @@ func (m *Load_balancersItemDropletsRequestBuilder) Delete(ctx context.Context, b
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *Load_balancersItemDropletsRequestBuilder) Post(ctx context.Context, body Load_balancersItemDropletsPostRequestBodyable, requestConfiguration *Load_balancersItemDropletsRequestBuilderPostRequestConfiguration)(error) {
+func (m *Load_balancersItemDropletsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_add_droplets_requestable, requestConfiguration *Load_balancersItemDropletsRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -90,7 +90,7 @@ func (m *Load_balancersItemDropletsRequestBuilder) Post(ctx context.Context, bod
 }
 // ToDeleteRequestInformation to remove a Droplet from a load balancer instance, send a DELETE request to`/v2/load_balancers/$LOAD_BALANCER_ID/droplets`. In the body of the request,there should be a `droplet_ids` attribute containing a list of Droplet IDs.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *Load_balancersItemDropletsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body Load_balancersItemDropletsDeleteRequestBodyable, requestConfiguration *Load_balancersItemDropletsRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Load_balancersItemDropletsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_remove_droplets_requestable, requestConfiguration *Load_balancersItemDropletsRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)
@@ -105,7 +105,7 @@ func (m *Load_balancersItemDropletsRequestBuilder) ToDeleteRequestInformation(ct
 }
 // ToPostRequestInformation to assign a Droplet to a load balancer instance, send a POST request to`/v2/load_balancers/$LOAD_BALANCER_ID/droplets`. In the body of the request,there should be a `droplet_ids` attribute containing a list of Droplet IDs.Individual Droplets can not be added to a load balancer configured with aDroplet tag. Attempting to do so will result in a "422 Unprocessable Entity"response from the API.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *Load_balancersItemDropletsRequestBuilder) ToPostRequestInformation(ctx context.Context, body Load_balancersItemDropletsPostRequestBodyable, requestConfiguration *Load_balancersItemDropletsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *Load_balancersItemDropletsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Load_balancers_add_droplets_requestable, requestConfiguration *Load_balancersItemDropletsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

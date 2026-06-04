@@ -42,7 +42,7 @@ func NewSecuritySettingsPlanRequestBuilder(rawUrl string, requestAdapter i2ae418
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *SecuritySettingsPlanRequestBuilder) Put(ctx context.Context, body SecuritySettingsPlanPutRequestBodyable, requestConfiguration *SecuritySettingsPlanRequestBuilderPutRequestConfiguration)(SecuritySettingsPlanResponseable, error) {
+func (m *SecuritySettingsPlanRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_update_settings_plan_requestable, requestConfiguration *SecuritySettingsPlanRequestBuilderPutRequestConfiguration)(SecuritySettingsPlanResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -72,7 +72,7 @@ func (m *SecuritySettingsPlanRequestBuilder) Put(ctx context.Context, body Secur
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *SecuritySettingsPlanRequestBuilder) PutAsPlanPutResponse(ctx context.Context, body SecuritySettingsPlanPutRequestBodyable, requestConfiguration *SecuritySettingsPlanRequestBuilderPutRequestConfiguration)(SecuritySettingsPlanPutResponseable, error) {
+func (m *SecuritySettingsPlanRequestBuilder) PutAsPlanPutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_update_settings_plan_requestable, requestConfiguration *SecuritySettingsPlanRequestBuilderPutRequestConfiguration)(SecuritySettingsPlanPutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -96,7 +96,7 @@ func (m *SecuritySettingsPlanRequestBuilder) PutAsPlanPutResponse(ctx context.Co
 }
 // ToPutRequestInformation to update CSPM plan coverage, send a PUT request to `/v2/security/settings/plan`.
 // returns a *RequestInformation when successful
-func (m *SecuritySettingsPlanRequestBuilder) ToPutRequestInformation(ctx context.Context, body SecuritySettingsPlanPutRequestBodyable, requestConfiguration *SecuritySettingsPlanRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *SecuritySettingsPlanRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_update_settings_plan_requestable, requestConfiguration *SecuritySettingsPlanRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

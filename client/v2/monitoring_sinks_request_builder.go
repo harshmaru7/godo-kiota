@@ -127,7 +127,7 @@ func (m *MonitoringSinksRequestBuilder) GetAsSinksGetResponse(ctx context.Contex
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *MonitoringSinksRequestBuilder) Post(ctx context.Context, body MonitoringSinksPostRequestBodyable, requestConfiguration *MonitoringSinksRequestBuilderPostRequestConfiguration)(error) {
+func (m *MonitoringSinksRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Monitoring_create_sink_requestable, requestConfiguration *MonitoringSinksRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -161,7 +161,7 @@ func (m *MonitoringSinksRequestBuilder) ToGetRequestInformation(ctx context.Cont
 }
 // ToPostRequestInformation to create a new sink, send a POST request to `/v2/monitoring/sinks`. Forwards logs from the resources identified in `resources` to the specified pre-existing destination.
 // returns a *RequestInformation when successful
-func (m *MonitoringSinksRequestBuilder) ToPostRequestInformation(ctx context.Context, body MonitoringSinksPostRequestBodyable, requestConfiguration *MonitoringSinksRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *MonitoringSinksRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Monitoring_create_sink_requestable, requestConfiguration *MonitoringSinksRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

@@ -47,7 +47,7 @@ func NewFirewallsItemRulesRequestBuilder(rawUrl string, requestAdapter i2ae4187f
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsItemRulesRequestBuilder) Delete(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewall_rulesable, requestConfiguration *FirewallsItemRulesRequestBuilderDeleteRequestConfiguration)(error) {
+func (m *FirewallsItemRulesRequestBuilder) Delete(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_delete_rules_requestable, requestConfiguration *FirewallsItemRulesRequestBuilderDeleteRequestConfiguration)(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -73,7 +73,7 @@ func (m *FirewallsItemRulesRequestBuilder) Delete(ctx context.Context, body i3e0
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsItemRulesRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewall_rulesable, requestConfiguration *FirewallsItemRulesRequestBuilderPostRequestConfiguration)(error) {
+func (m *FirewallsItemRulesRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_add_rules_requestable, requestConfiguration *FirewallsItemRulesRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -94,7 +94,7 @@ func (m *FirewallsItemRulesRequestBuilder) Post(ctx context.Context, body i3e0d1
 }
 // ToDeleteRequestInformation to remove access rules from a firewall, send a DELETE request to`/v2/firewalls/$FIREWALL_ID/rules`. The body of the request may include an`inbound_rules` and/or `outbound_rules` attribute containing an array of rulesto be removed.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *FirewallsItemRulesRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewall_rulesable, requestConfiguration *FirewallsItemRulesRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsItemRulesRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_delete_rules_requestable, requestConfiguration *FirewallsItemRulesRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)
@@ -109,7 +109,7 @@ func (m *FirewallsItemRulesRequestBuilder) ToDeleteRequestInformation(ctx contex
 }
 // ToPostRequestInformation to add additional access rules to a firewall, send a POST request to`/v2/firewalls/$FIREWALL_ID/rules`. The body of the request may include aninbound_rules and/or outbound_rules attribute containing an array of rules tobe added.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *FirewallsItemRulesRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewall_rulesable, requestConfiguration *FirewallsItemRulesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsItemRulesRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_add_rules_requestable, requestConfiguration *FirewallsItemRulesRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

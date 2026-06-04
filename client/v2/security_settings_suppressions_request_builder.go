@@ -65,7 +65,7 @@ func NewSecuritySettingsSuppressionsRequestBuilder(rawUrl string, requestAdapter
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *SecuritySettingsSuppressionsRequestBuilder) Post(ctx context.Context, body SecuritySettingsSuppressionsPostRequestBodyable, requestConfiguration *SecuritySettingsSuppressionsRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Suppressed_resource_rootable, error) {
+func (m *SecuritySettingsSuppressionsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_create_suppression_requestable, requestConfiguration *SecuritySettingsSuppressionsRequestBuilderPostRequestConfiguration)(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Suppressed_resource_rootable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -89,7 +89,7 @@ func (m *SecuritySettingsSuppressionsRequestBuilder) Post(ctx context.Context, b
 }
 // ToPostRequestInformation to suppress scan findings, send a POST request to `/v2/security/settings/suppressions`.
 // returns a *RequestInformation when successful
-func (m *SecuritySettingsSuppressionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body SecuritySettingsSuppressionsPostRequestBodyable, requestConfiguration *SecuritySettingsSuppressionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *SecuritySettingsSuppressionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Security_create_suppression_requestable, requestConfiguration *SecuritySettingsSuppressionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

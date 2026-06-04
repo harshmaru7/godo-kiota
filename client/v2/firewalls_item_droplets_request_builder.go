@@ -47,7 +47,7 @@ func NewFirewallsItemDropletsRequestBuilder(rawUrl string, requestAdapter i2ae41
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsItemDropletsRequestBuilder) Delete(ctx context.Context, body FirewallsItemDropletsDeleteRequestBodyable, requestConfiguration *FirewallsItemDropletsRequestBuilderDeleteRequestConfiguration)(error) {
+func (m *FirewallsItemDropletsRequestBuilder) Delete(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_delete_droplets_requestable, requestConfiguration *FirewallsItemDropletsRequestBuilderDeleteRequestConfiguration)(error) {
     requestInfo, err := m.ToDeleteRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -73,7 +73,7 @@ func (m *FirewallsItemDropletsRequestBuilder) Delete(ctx context.Context, body F
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsItemDropletsRequestBuilder) Post(ctx context.Context, body FirewallsItemDropletsPostRequestBodyable, requestConfiguration *FirewallsItemDropletsRequestBuilderPostRequestConfiguration)(error) {
+func (m *FirewallsItemDropletsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_assign_droplets_requestable, requestConfiguration *FirewallsItemDropletsRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -94,7 +94,7 @@ func (m *FirewallsItemDropletsRequestBuilder) Post(ctx context.Context, body Fir
 }
 // ToDeleteRequestInformation to remove a Droplet from a firewall, send a DELETE request to`/v2/firewalls/$FIREWALL_ID/droplets`. In the body of the request, there shouldbe a `droplet_ids` attribute containing a list of Droplet IDs.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *FirewallsItemDropletsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body FirewallsItemDropletsDeleteRequestBodyable, requestConfiguration *FirewallsItemDropletsRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsItemDropletsRequestBuilder) ToDeleteRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_delete_droplets_requestable, requestConfiguration *FirewallsItemDropletsRequestBuilderDeleteRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DELETE, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)
@@ -109,7 +109,7 @@ func (m *FirewallsItemDropletsRequestBuilder) ToDeleteRequestInformation(ctx con
 }
 // ToPostRequestInformation to assign a Droplet to a firewall, send a POST request to`/v2/firewalls/$FIREWALL_ID/droplets`. In the body of the request, thereshould be a `droplet_ids` attribute containing a list of Droplet IDs.No response body will be sent back, but the response code will indicatesuccess. Specifically, the response code will be a 204, which means that theaction was successful with no returned body data.
 // returns a *RequestInformation when successful
-func (m *FirewallsItemDropletsRequestBuilder) ToPostRequestInformation(ctx context.Context, body FirewallsItemDropletsPostRequestBodyable, requestConfiguration *FirewallsItemDropletsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsItemDropletsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_assign_droplets_requestable, requestConfiguration *FirewallsItemDropletsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

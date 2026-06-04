@@ -137,7 +137,7 @@ func (m *UptimeChecksRequestBuilder) GetAsChecksGetResponse(ctx context.Context,
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *UptimeChecksRequestBuilder) Post(ctx context.Context, body UptimeChecksPostRequestBodyable, requestConfiguration *UptimeChecksRequestBuilderPostRequestConfiguration)(UptimeChecksResponseable, error) {
+func (m *UptimeChecksRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_create_check_requestable, requestConfiguration *UptimeChecksRequestBuilderPostRequestConfiguration)(UptimeChecksResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -163,7 +163,7 @@ func (m *UptimeChecksRequestBuilder) Post(ctx context.Context, body UptimeChecks
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *UptimeChecksRequestBuilder) PostAsChecksPostResponse(ctx context.Context, body UptimeChecksPostRequestBodyable, requestConfiguration *UptimeChecksRequestBuilderPostRequestConfiguration)(UptimeChecksPostResponseable, error) {
+func (m *UptimeChecksRequestBuilder) PostAsChecksPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_create_check_requestable, requestConfiguration *UptimeChecksRequestBuilderPostRequestConfiguration)(UptimeChecksPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -199,7 +199,7 @@ func (m *UptimeChecksRequestBuilder) ToGetRequestInformation(ctx context.Context
 }
 // ToPostRequestInformation to create an Uptime check, send a POST request to `/v2/uptime/checks` specifying the attributesin the table below in the JSON body.
 // returns a *RequestInformation when successful
-func (m *UptimeChecksRequestBuilder) ToPostRequestInformation(ctx context.Context, body UptimeChecksPostRequestBodyable, requestConfiguration *UptimeChecksRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *UptimeChecksRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Uptime_create_check_requestable, requestConfiguration *UptimeChecksRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

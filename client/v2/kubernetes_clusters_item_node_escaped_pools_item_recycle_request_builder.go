@@ -40,7 +40,7 @@ func NewKubernetesClustersItemNode_poolsItemRecycleRequestBuilder(rawUrl string,
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *KubernetesClustersItemNode_poolsItemRecycleRequestBuilder) Post(ctx context.Context, body KubernetesClustersItemNode_poolsItemRecyclePostRequestBodyable, requestConfiguration *KubernetesClustersItemNode_poolsItemRecycleRequestBuilderPostRequestConfiguration)(error) {
+func (m *KubernetesClustersItemNode_poolsItemRecycleRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kubernetes_recycle_node_pool_requestable, requestConfiguration *KubernetesClustersItemNode_poolsItemRecycleRequestBuilderPostRequestConfiguration)(error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return err
@@ -61,7 +61,7 @@ func (m *KubernetesClustersItemNode_poolsItemRecycleRequestBuilder) Post(ctx con
 // ToPostRequestInformation the endpoint has been deprecated. Please use the DELETE`/v2/kubernetes/clusters/$K8S_CLUSTER_ID/node_pools/$NODE_POOL_ID/nodes/$NODE_ID`method instead.
 // Deprecated: 
 // returns a *RequestInformation when successful
-func (m *KubernetesClustersItemNode_poolsItemRecycleRequestBuilder) ToPostRequestInformation(ctx context.Context, body KubernetesClustersItemNode_poolsItemRecyclePostRequestBodyable, requestConfiguration *KubernetesClustersItemNode_poolsItemRecycleRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *KubernetesClustersItemNode_poolsItemRecycleRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kubernetes_recycle_node_pool_requestable, requestConfiguration *KubernetesClustersItemNode_poolsItemRecycleRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

@@ -142,7 +142,7 @@ func (m *FirewallsWithFirewall_ItemRequestBuilder) GetAsWithFirewall_GetResponse
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsWithFirewall_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewallable, requestConfiguration *FirewallsWithFirewall_ItemRequestBuilderPutRequestConfiguration)(FirewallsItemWithFirewall_Responseable, error) {
+func (m *FirewallsWithFirewall_ItemRequestBuilder) Put(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_update_requestable, requestConfiguration *FirewallsWithFirewall_ItemRequestBuilderPutRequestConfiguration)(FirewallsItemWithFirewall_Responseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -172,7 +172,7 @@ func (m *FirewallsWithFirewall_ItemRequestBuilder) Put(ctx context.Context, body
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *FirewallsWithFirewall_ItemRequestBuilder) PutAsWithFirewall_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewallable, requestConfiguration *FirewallsWithFirewall_ItemRequestBuilderPutRequestConfiguration)(FirewallsItemWithFirewall_PutResponseable, error) {
+func (m *FirewallsWithFirewall_ItemRequestBuilder) PutAsWithFirewall_PutResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_update_requestable, requestConfiguration *FirewallsWithFirewall_ItemRequestBuilderPutRequestConfiguration)(FirewallsItemWithFirewall_PutResponseable, error) {
     requestInfo, err := m.ToPutRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -228,7 +228,7 @@ func (m *FirewallsWithFirewall_ItemRequestBuilder) ToGetRequestInformation(ctx c
 }
 // ToPutRequestInformation to update the configuration of an existing firewall, send a PUT request to`/v2/firewalls/$FIREWALL_ID`. The request should contain a full representationof the firewall including existing attributes. **Note that any attributes thatare not provided will be reset to their default values.**<br><br>You must have read access (e.g. `droplet:read`) to all resources attachedto the firewall to successfully update the firewall.
 // returns a *RequestInformation when successful
-func (m *FirewallsWithFirewall_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewallable, requestConfiguration *FirewallsWithFirewall_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *FirewallsWithFirewall_ItemRequestBuilder) ToPutRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Firewalls_update_requestable, requestConfiguration *FirewallsWithFirewall_ItemRequestBuilderPutRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.PUT, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

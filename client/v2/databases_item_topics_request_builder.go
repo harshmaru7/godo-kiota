@@ -117,7 +117,7 @@ func (m *DatabasesItemTopicsRequestBuilder) GetAsTopicsGetResponse(ctx context.C
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemTopicsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kafka_topic_createable, requestConfiguration *DatabasesItemTopicsRequestBuilderPostRequestConfiguration)(DatabasesItemTopicsResponseable, error) {
+func (m *DatabasesItemTopicsRequestBuilder) Post(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_kafka_topic_requestable, requestConfiguration *DatabasesItemTopicsRequestBuilderPostRequestConfiguration)(DatabasesItemTopicsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -145,7 +145,7 @@ func (m *DatabasesItemTopicsRequestBuilder) Post(ctx context.Context, body i3e0d
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *DatabasesItemTopicsRequestBuilder) PostAsTopicsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kafka_topic_createable, requestConfiguration *DatabasesItemTopicsRequestBuilderPostRequestConfiguration)(DatabasesItemTopicsPostResponseable, error) {
+func (m *DatabasesItemTopicsRequestBuilder) PostAsTopicsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_kafka_topic_requestable, requestConfiguration *DatabasesItemTopicsRequestBuilderPostRequestConfiguration)(DatabasesItemTopicsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -179,7 +179,7 @@ func (m *DatabasesItemTopicsRequestBuilder) ToGetRequestInformation(ctx context.
 }
 // ToPostRequestInformation to create a topic attached to a Kafka cluster, send a POST request to`/v2/databases/$DATABASE_ID/topics`.The result will be a JSON object with a `topic` key.
 // returns a *RequestInformation when successful
-func (m *DatabasesItemTopicsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Kafka_topic_createable, requestConfiguration *DatabasesItemTopicsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *DatabasesItemTopicsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Databases_create_kafka_topic_requestable, requestConfiguration *DatabasesItemTopicsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         requestInfo.Headers.AddAll(requestConfiguration.Headers)

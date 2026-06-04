@@ -15,8 +15,8 @@ import (
 type VolumesItemActionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// VolumesItemActionsRequestBuilder__ActionsPostRequestBody composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable
-type VolumesItemActionsRequestBuilder__ActionsPostRequestBody struct {
+// Volume_actions_post_by_id_request composed type wrapper for classes i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable, i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable
+type Volume_actions_post_by_id_request struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable
     volume_action_post_attach i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable
@@ -24,16 +24,16 @@ type VolumesItemActionsRequestBuilder__ActionsPostRequestBody struct {
     // Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable
     volume_action_post_resize i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable
 }
-// VolumesItemActionsRequestBuilder__NewActionsPostRequestBody instantiates a new VolumesItemActionsRequestBuilder__ActionsPostRequestBody and sets the default values.
-func VolumesItemActionsRequestBuilder__NewActionsPostRequestBody()(*VolumesItemActionsRequestBuilder__ActionsPostRequestBody) {
-    m := &VolumesItemActionsRequestBuilder__ActionsPostRequestBody{
+// NewVolume_actions_post_by_id_request instantiates a new Volume_actions_post_by_id_request and sets the default values.
+func NewVolume_actions_post_by_id_request()(*Volume_actions_post_by_id_request) {
+    m := &Volume_actions_post_by_id_request{
     }
     return m
 }
-// VolumesItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
+// CreateVolume_actions_post_by_id_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
 // returns a Parsable when successful
-func VolumesItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
-    result := VolumesItemActionsRequestBuilder__NewActionsPostRequestBody()
+func CreateVolume_actions_post_by_id_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
+    result := NewVolume_actions_post_by_id_request()
     if parseNode != nil {
         if val, err := parseNode.GetObjectValue(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.CreateVolume_action_post_attachFromDiscriminatorValue); val != nil {
             if err != nil {
@@ -62,31 +62,31 @@ func VolumesItemActionsRequestBuilder__CreateActionsPostRequestBodyFromDiscrimin
 }
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
+func (m *Volume_actions_post_by_id_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
     return make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
 }
 // GetIsComposedType determines if the current object is a wrapper around a composed type
 // returns a bool when successful
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) GetIsComposedType()(bool) {
+func (m *Volume_actions_post_by_id_request) GetIsComposedType()(bool) {
     return true
 }
 // GetVolumeActionPostAttach gets the volume_action_post_attach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable
 // returns a Volume_action_post_attachable when successful
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) GetVolumeActionPostAttach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable) {
+func (m *Volume_actions_post_by_id_request) GetVolumeActionPostAttach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable) {
     return m.volume_action_post_attach
 }
 // GetVolumeActionPostDetach gets the volume_action_post_detach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable
 // returns a Volume_action_post_detachable when successful
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) GetVolumeActionPostDetach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable) {
+func (m *Volume_actions_post_by_id_request) GetVolumeActionPostDetach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable) {
     return m.volume_action_post_detach
 }
 // GetVolumeActionPostResize gets the volume_action_post_resize property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable
 // returns a Volume_action_post_resizeable when successful
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) GetVolumeActionPostResize()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable) {
+func (m *Volume_actions_post_by_id_request) GetVolumeActionPostResize()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable) {
     return m.volume_action_post_resize
 }
 // Serialize serializes information the current object
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
+func (m *Volume_actions_post_by_id_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
     if m.GetVolumeActionPostAttach() != nil {
         err := writer.WriteObjectValue("", m.GetVolumeActionPostAttach())
         if err != nil {
@@ -106,15 +106,15 @@ func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) Serialize(wri
     return nil
 }
 // SetVolumeActionPostAttach sets the volume_action_post_attach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) SetVolumeActionPostAttach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable)() {
+func (m *Volume_actions_post_by_id_request) SetVolumeActionPostAttach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable)() {
     m.volume_action_post_attach = value
 }
 // SetVolumeActionPostDetach sets the volume_action_post_detach property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) SetVolumeActionPostDetach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable)() {
+func (m *Volume_actions_post_by_id_request) SetVolumeActionPostDetach(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable)() {
     m.volume_action_post_detach = value
 }
 // SetVolumeActionPostResize sets the volume_action_post_resize property value. Composed type representation for type i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable
-func (m *VolumesItemActionsRequestBuilder__ActionsPostRequestBody) SetVolumeActionPostResize(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable)() {
+func (m *Volume_actions_post_by_id_request) SetVolumeActionPostResize(value i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_resizeable)() {
     m.volume_action_post_resize = value
 }
 // VolumesItemActionsRequestBuilderGetQueryParameters to retrieve all actions that have been executed on a volume, send a GET request to `/v2/volumes/$VOLUME_ID/actions`.
@@ -149,7 +149,7 @@ type VolumesItemActionsRequestBuilderPostRequestConfiguration struct {
     // Request query parameters
     QueryParameters *VolumesItemActionsRequestBuilderPostQueryParameters
 }
-type VolumesItemActionsRequestBuilder__ActionsPostRequestBodyable interface {
+type Volume_actions_post_by_id_requestable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetVolumeActionPostAttach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_attachable)
     GetVolumeActionPostDetach()(i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_action_post_detachable)
@@ -259,7 +259,7 @@ func (m *VolumesItemActionsRequestBuilder) GetAsActionsGetResponse(ctx context.C
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VolumesItemActionsRequestBuilder) Post(ctx context.Context, body VolumesItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *VolumesItemActionsRequestBuilderPostRequestConfiguration)(VolumesItemActionsResponseable, error) {
+func (m *VolumesItemActionsRequestBuilder) Post(ctx context.Context, body Volume_actions_post_by_id_requestable, requestConfiguration *VolumesItemActionsRequestBuilderPostRequestConfiguration)(VolumesItemActionsResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -287,7 +287,7 @@ func (m *VolumesItemActionsRequestBuilder) Post(ctx context.Context, body Volume
 // returns a Error error when the service returns a 429 status code
 // returns a Error error when the service returns a 500 status code
 // returns a Error error when the service returns a 4XX or 5XX status code
-func (m *VolumesItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body VolumesItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *VolumesItemActionsRequestBuilderPostRequestConfiguration)(VolumesItemActionsPostResponseable, error) {
+func (m *VolumesItemActionsRequestBuilder) PostAsActionsPostResponse(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_actions_post_by_id_requestable, requestConfiguration *VolumesItemActionsRequestBuilderPostRequestConfiguration)(VolumesItemActionsPostResponseable, error) {
     requestInfo, err := m.ToPostRequestInformation(ctx, body, requestConfiguration);
     if err != nil {
         return nil, err
@@ -324,7 +324,7 @@ func (m *VolumesItemActionsRequestBuilder) ToGetRequestInformation(ctx context.C
 }
 // ToPostRequestInformation to initiate an action on a block storage volume by Id, send a POST request to`~/v2/volumes/$VOLUME_ID/actions`. The body should contain the appropriateattributes for the respective action.## Attach a Block Storage Volume to a Droplet| Attribute  | Details                                                             || ---------- | ------------------------------------------------------------------- || type       | This must be `attach`                                               || droplet_id | Set to the Droplet's ID                                             || region     | Set to the slug representing the region where the volume is located |Each volume may only be attached to a single Droplet. However, up to fifteenvolumes may be attached to a Droplet at a time. Pre-formatted volumes will beautomatically mounted to Ubuntu, Debian, Fedora, Fedora Atomic, and CentOSDroplets created on or after April 26, 2018 when attached. On older Droplets,[additional configuration](https://docs.digitalocean.com/products/volumes/how-to/mount/)is required.## Remove a Block Storage Volume from a Droplet| Attribute  | Details                                                             || ---------- | ------------------------------------------------------------------- || type       | This must be `detach`                                               || droplet_id | Set to the Droplet's ID                                             || region     | Set to the slug representing the region where the volume is located |## Resize a Volume| Attribute      | Details                                                             || -------------- | ------------------------------------------------------------------- || type           | This must be `resize`                                               || size_gigabytes | The new size of the block storage volume in GiB (1024^3)            || region         | Set to the slug representing the region where the volume is located |Volumes may only be resized upwards. The maximum size for a volume is 16TiB.
 // returns a *RequestInformation when successful
-func (m *VolumesItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body VolumesItemActionsRequestBuilder__ActionsPostRequestBodyable, requestConfiguration *VolumesItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
+func (m *VolumesItemActionsRequestBuilder) ToPostRequestInformation(ctx context.Context, body i3e0d1c568aeb4f96d88b3bf865e0f613ed1556100c1ffe0f3a0a032aa9561f76.Volume_actions_post_by_id_requestable, requestConfiguration *VolumesItemActionsRequestBuilderPostRequestConfiguration)(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
     requestInfo := i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.NewRequestInformationWithMethodAndUrlTemplateAndPathParameters(i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.POST, m.BaseRequestBuilder.UrlTemplate, m.BaseRequestBuilder.PathParameters)
     if requestConfiguration != nil {
         if requestConfiguration.QueryParameters != nil {
