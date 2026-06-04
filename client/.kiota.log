@@ -1,9 +1,9 @@
 Warning: KiotaBuilder OpenAPI warning: #/ - The schema messages_request_content_block_param is a polymorphic type but does not define a discriminator. This will result in serialization errors.
-Warning: KiotaBuilder OpenAPI warning: #/ - The schema images_post_account_transfer_create is a polymorphic type but does not define a discriminator. This will result in serialization errors.
-Warning: KiotaBuilder OpenAPI warning: #/ - The schema partner_attachment_updatable is a polymorphic type but does not define a discriminator. This will result in serialization errors.
-Warning: KiotaBuilder OpenAPI warning: #/ - The schema messages_tool_choice_param is a polymorphic type but does not define a discriminator. This will result in serialization errors.
 Warning: KiotaBuilder OpenAPI warning: #/ - The schema floating_ip_create is a polymorphic type but does not define a discriminator. This will result in serialization errors.
+Warning: KiotaBuilder OpenAPI warning: #/ - The schema partner_attachment_updatable is a polymorphic type but does not define a discriminator. This will result in serialization errors.
 Warning: KiotaBuilder OpenAPI warning: #/ - The schema reserved_ip_create is a polymorphic type but does not define a discriminator. This will result in serialization errors.
+Warning: KiotaBuilder OpenAPI warning: #/ - The schema images_post_account_transfer_create is a polymorphic type but does not define a discriminator. This will result in serialization errors.
+Warning: KiotaBuilder OpenAPI warning: #/ - The schema messages_tool_choice_param is a polymorphic type but does not define a discriminator. This will result in serialization errors.
 Warning: KiotaBuilder OpenAPI warning: #/ - The schema messages_response_content_block is a polymorphic type but does not define a discriminator. This will result in serialization errors.
 Warning: KiotaBuilder OpenAPI warning: #/components/schemas/app_domain_spec/properties/zone - The format hostname is not supported by Kiota and the string type will be used.
 Warning: KiotaBuilder OpenAPI warning: #/components/schemas/app_autoscaling_spec/properties/min_instance_count - The format uint32 is not supported by Kiota for the type Integer and the string type will be used.
@@ -111,12 +111,12 @@ Warning: KiotaBuilder OpenAPI warning: #/components/responses/reserved_ipv6_crea
 Warning: KiotaBuilder Discriminator app_job_spec is not inherited from app_component_base.
 Warning: KiotaBuilder Discriminator app_service_spec is not inherited from app_component_base.
 Warning: KiotaBuilder Discriminator app_worker_spec is not inherited from app_component_base.
+Warning: KiotaBuilder Discriminator apps_deployments_response is not inherited from pagination.
+Warning: KiotaBuilder Discriminator apps_response is not inherited from pagination.
 Warning: KiotaBuilder Discriminator kubernetes_node_pool_update is not inherited from kubernetes_node_pool_base.
 Warning: KiotaBuilder Discriminator kubernetes_node_pool is not inherited from kubernetes_node_pool_base.
 Warning: KiotaBuilder Discriminator kubernetes_node_pool is not inherited from kubernetes_node_pool_update.
 Warning: KiotaBuilder Discriminator kubernetes_node_pool_base is not inherited from kubernetes_node_pool_update.
-Warning: KiotaBuilder Discriminator vpc_peering is not inherited from vpc_peering_updatable.
 Warning: KiotaBuilder Discriminator check is not inherited from check_updatable.
-Warning: KiotaBuilder Discriminator apps_deployments_response is not inherited from pagination.
-Warning: KiotaBuilder Discriminator apps_response is not inherited from pagination.
 Warning: KiotaBuilder Discriminator alert is not inherited from alert_updatable.
+Warning: KiotaBuilder Discriminator vpc_peering is not inherited from vpc_peering_updatable.
