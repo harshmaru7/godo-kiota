@@ -8,13 +8,16 @@ import (
 )
 
 type Vpcs_patch_peerings_request struct {
-    Vpc_peering_updatable
+    // Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+    additionalData map[string]any
+    // The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
+    name *string
 }
 // NewVpcs_patch_peerings_request instantiates a new Vpcs_patch_peerings_request and sets the default values.
 func NewVpcs_patch_peerings_request()(*Vpcs_patch_peerings_request) {
     m := &Vpcs_patch_peerings_request{
-        Vpc_peering_updatable: *NewVpc_peering_updatable(),
     }
+    m.SetAdditionalData(make(map[string]any))
     return m
 }
 // CreateVpcs_patch_peerings_requestFromDiscriminatorValue creates a new instance of the appropriate class based on discriminator value
@@ -22,21 +25,59 @@ func NewVpcs_patch_peerings_request()(*Vpcs_patch_peerings_request) {
 func CreateVpcs_patch_peerings_requestFromDiscriminatorValue(parseNode i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable, error) {
     return NewVpcs_patch_peerings_request(), nil
 }
+// GetAdditionalData gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+// returns a map[string]any when successful
+func (m *Vpcs_patch_peerings_request) GetAdditionalData()(map[string]any) {
+    return m.additionalData
+}
 // GetFieldDeserializers the deserialization information for the current model
 // returns a map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error) when successful
 func (m *Vpcs_patch_peerings_request) GetFieldDeserializers()(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error)) {
-    res := m.Vpc_peering_updatable.GetFieldDeserializers()
+    res := make(map[string]func(i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode)(error))
+    res["name"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
+        val, err := n.GetStringValue()
+        if err != nil {
+            return err
+        }
+        if val != nil {
+            m.SetName(val)
+        }
+        return nil
+    }
     return res
+}
+// GetName gets the name property value. The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
+// returns a *string when successful
+func (m *Vpcs_patch_peerings_request) GetName()(*string) {
+    return m.name
 }
 // Serialize serializes information the current object
 func (m *Vpcs_patch_peerings_request) Serialize(writer i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.SerializationWriter)(error) {
-    err := m.Vpc_peering_updatable.Serialize(writer)
-    if err != nil {
-        return err
+    {
+        err := writer.WriteStringValue("name", m.GetName())
+        if err != nil {
+            return err
+        }
+    }
+    {
+        err := writer.WriteAdditionalData(m.GetAdditionalData())
+        if err != nil {
+            return err
+        }
     }
     return nil
 }
+// SetAdditionalData sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+func (m *Vpcs_patch_peerings_request) SetAdditionalData(value map[string]any)() {
+    m.additionalData = value
+}
+// SetName sets the name property value. The name of the VPC peering. Must be unique within the team and may only contain alphanumeric characters and dashes.
+func (m *Vpcs_patch_peerings_request) SetName(value *string)() {
+    m.name = value
+}
 type Vpcs_patch_peerings_requestable interface {
+    i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.AdditionalDataHolder
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
-    Vpc_peering_updatableable
+    GetName()(*string)
+    SetName(value *string)()
 }
