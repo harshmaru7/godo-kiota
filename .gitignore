@@ -4,6 +4,9 @@
 # Spec checkout used during CI generation
 /.spec/
 
+# Kiota's per-run log (timestamps create noise in every regen PR)
+**/.kiota.log
+
 # Go
 *.test
 *.out
